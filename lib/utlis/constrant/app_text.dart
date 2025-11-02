@@ -27,8 +27,8 @@ class AppText {
 
 static const String email ="Email";
 static const String password = "Password";
-static const String signIn= "SignIn";
-static const String signUp= "SignUP";
+static const String signIn= "Sign In";
+static const String signUp= "Sign Up";
 static const String enterEmail = "Enter your email";
 static const String enterPassword = "Enter your password";
 
@@ -36,8 +36,8 @@ static const String enterPassword = "Enter your password";
 // login
 static const String loginTitle ="Welcome Back!";
 static const String loginSubTitle ="Glad to havea yyou here again. Let's get Started";
-static const String incorrectPassword = "Incorrect Password";
-static const String forgetPassword = "Forget Password";
+static const String incorrectPassword = "*Incorrect Password";
+static const String forgetPassword = "Forget Password?";
 static const String orContinue = "Or Continue with";
 static const String donotHaveAccount  ="Don't have account?";
 
