@@ -18,13 +18,10 @@ class OnboardingColtroller extends  GetxController{
 
  // update pagen on dot click
  
- void dotNavigationClick(index){
-
-  currentIndex.value=index;
-
-  pageController.jumpTo(index);
-
- }
+ void dotNavigationClick (index){
+    currentIndex.value= index;
+    pageController.jumpToPage(index);
+  }
  //// next page
   void nextPage (){
 

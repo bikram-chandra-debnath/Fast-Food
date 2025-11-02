@@ -1,14 +1,17 @@
+import 'package:fast_food/feature/authenticaton/controller/onboarding/onboarding_coltroller.dart';
+import 'package:fast_food/feature/authenticaton/screen/onboarding/widgets/next_button.dart';
 import 'package:fast_food/feature/authenticaton/screen/onboarding/widgets/onboarding_page.dart';
-import 'package:fast_food/utlis/constrant/app_colors.dart';
+import 'package:fast_food/feature/authenticaton/screen/onboarding/widgets/page_indicator.dart';
+import 'package:fast_food/feature/authenticaton/screen/onboarding/widgets/skip_button.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
-import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
-import 'package:fast_food/utlis/helper/device_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:get/get.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({super.key});
+  OnboardingScreen({super.key});
+
+  final controller = Get.put(OnboardingColtroller());
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +20,8 @@ class OnboardingScreen extends StatelessWidget {
         children: [
           // background image and title
           PageView(
+            controller: controller.pageController,
+            onPageChanged: (value) => controller.updatePageIndicator(value),
             children: [
               OnboardingPage(
                 image: AppImage.onboarding1,
@@ -37,57 +42,14 @@ class OnboardingScreen extends StatelessWidget {
           ),
 
           // dot indicator
-          Positioned(
-            bottom: 120,
-            left: DeviceHelper.getScreenWidth(context) / 2.5,
-            right: DeviceHelper.getScreenWidth(context) / 2.5,
-
-            child: SmoothPageIndicator(
-              controller: PageController(),
-              count: 3,
-              effect: ExpandingDotsEffect(
-                dotHeight: 6.0,
-                activeDotColor: AppColors.primary,
-              ),
-            ),
-          ),
+          PageIndicator(),
 
           // Button
-          Positioned(
-            bottom: 30,
-            left: AppSizes.defaultSpace,
-            right: AppSizes.defaultSpace,
-            child: AppElevatedButton(),
-          ),
+          NextButton(),
+
+          // skip
+          SkipButton(),
         ],
-      ),
-    );
-  }
-}
-
-class AppElevatedButton extends StatelessWidget {
-  const AppElevatedButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 60,
-      width: double.infinity,
-      child: ElevatedButton(
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.deepOrange,
-          foregroundColor: Colors.white,
-        ),
-        child: Text(
-          AppText.appContinue,
-          style: Theme.of(context).textTheme.titleLarge!.copyWith(
-            color: AppColors.white,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
       ),
     );
   }
