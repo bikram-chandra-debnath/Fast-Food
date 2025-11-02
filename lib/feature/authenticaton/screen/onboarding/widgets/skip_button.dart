@@ -20,7 +20,7 @@ class SkipButton extends StatelessWidget {
       right: AppSizes.defaultSpace,
       child: Obx(
         ()=> TextButton(
-          onPressed: (){},
+          onPressed: ()=> controller.skipPage(),
           // ignore: unrelated_type_equality_checks
           child:controller.currentIndex ==2? SizedBox(): Text(
             AppText.skip,
