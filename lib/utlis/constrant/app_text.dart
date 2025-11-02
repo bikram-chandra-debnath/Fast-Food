@@ -17,8 +17,9 @@ class AppText {
 
   // Buttons
 
+  static const String skip = "Skip";
   static const String appContinue = "Continue";
-  static const String getStarted = "Get Startd";
+  static const String getStarted = "Get Started";
 
 
 //                 ---------[Authentication Screen]---------
