@@ -1,20 +1,21 @@
-import 'package:fast_food/utlis/constrant/app_colors.dart';
+
 import 'package:flutter/material.dart';
 
 class AppTitle extends StatelessWidget {
   const AppTitle({
-    super.key, required this.title,  this.textAlign=TextAlign.left,
+    super.key, required this.title,  this.textAlign=TextAlign.left, required this.style,
   });
 
   final String title;
   final TextAlign textAlign;
+  final TextStyle style;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       overflow: TextOverflow.fade,
       title,
-      style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: AppColors.white),
+      style: style,
       textAlign: textAlign,
     );
   }
