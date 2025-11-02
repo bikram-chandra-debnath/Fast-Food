@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              AppTitle(title: AppText.loginTitle, style: Theme.of(context).textTheme.headlineMedium!.copyWith(),)
+              AppTitle(title: AppText.loginTitle, style: Theme.of(context).textTheme.headlineLarge!.copyWith(),)
             ],
           )
         ],
