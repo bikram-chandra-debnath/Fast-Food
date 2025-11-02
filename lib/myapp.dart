@@ -1,5 +1,6 @@
 
 import 'package:fast_food/feature/authenticaton/screen/onboarding/onboarding_screen.dart';
+import 'package:fast_food/utlis/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -11,11 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       home:  OnboardingScreen(),
     );
   }
