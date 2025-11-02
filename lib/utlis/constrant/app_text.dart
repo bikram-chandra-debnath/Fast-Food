@@ -1,0 +1,58 @@
+class AppText {
+
+  AppText._();
+
+  //                          ------[Onboarding Screen]--------
+
+// onboardig title
+  static const String onboarding1Title = "Discover Deliciousness Anytime,Anywhere";
+  static const String onboarding2Title = "Order with Ease, Anytime you Crave";
+  static const String onboarding3Title = "Track and Enjoy Every Bite of the Journey";
+
+  // onboarding subtitle
+
+  static const String onboarding1Subtitle = "Explore endless food options, order in secons, and enjoy quick delivery straight to your door.";
+  static const String onboarding2Subtitle = "Discover new tastes, customixe your meals, and track your order in real-time with ease.";
+  static const String onboarding3Subtitle = "From breakfast to dinner, find your favorite dishes and get theme delivered fast and fresh.";
+
+  // Buttons
+
+  static const String appContinue = "Continue";
+  static const String getStarted = "Get Startd";
+
+
+//                 ---------[Authentication Screen]---------
+
+
+static const String email ="Email";
+static const String password = "Password";
+static const String signIn= "SignIn";
+static const String signUp= "SignUP";
+static const String enterEmail = "Enter your email";
+static const String enterPassword = "Enter your password";
+
+
+// login
+static const String loginTitle ="Welcome Back!";
+static const String loginSubTitle ="Glad to havea yyou here again. Let's get Started";
+static const String incorrectPassword = "Incorrect Password";
+static const String forgetPassword = "Forget Password";
+static const String orContinue = "Or Continue with";
+static const String donotHaveAccount  ="Don't have account?";
+
+// signup
+static const String signUpTitle ="Create Your Account";
+static const String signUpSubTitle ="Join us today and unlock endless possibilities. It's quick, easy, and just step away!";
+static const String fullName = "Full Name";
+static const String enterName = "Enter your full Name";
+static const  String phoneNumber = "Phone Number";
+static const  String enterPhoneNumber = "Enter your phone Number";
+
+static const String byCreating= "By creating an account, you agree t out ";
+static const String terms = "Terms and Conditions ";
+static const String and= "And ";
+static const String privacyNotice = "Privacy Notice";
+
+static const String alreadyHave= "Already have account? ";
+
+}
