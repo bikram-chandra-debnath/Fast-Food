@@ -21,6 +21,7 @@ final controller = OnboardingColtroller.instance;
         controller.nextPage();
        }, child: Obx(
          ()=> Text(
+            // ignore: unrelated_type_equality_checks
             controller.currentIndex==2? AppText.getStarted: AppText.appContinue,
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
               color: AppColors.white,

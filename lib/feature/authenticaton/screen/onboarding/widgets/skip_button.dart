@@ -20,6 +20,7 @@ class SkipButton extends StatelessWidget {
           onPressed: () => controller.skipPage(),
           // ignore: unrelated_type_equality_checks
           child:
+              // ignore: unrelated_type_equality_checks
               controller.currentIndex == 2
                   ? SizedBox()
                   : Text(
