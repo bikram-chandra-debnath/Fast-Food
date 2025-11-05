@@ -28,7 +28,7 @@ static const Color buttonDisabled = Color(0xffc4c4c4);
 
 static const Color error = Color(0xffd32f2f);
 static const Color sucess = Color(0xff388e3c);
-static const Color warning  = Color(0xfff57c00);
+static const Color warning  = Color.fromARGB(255, 245, 200, 0);
 static const Color info  = Color(0xff1976d2);
 
 
