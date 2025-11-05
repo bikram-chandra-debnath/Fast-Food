@@ -31,7 +31,7 @@ class SignupFooter extends StatelessWidget {
           label: AppText.alreadyHave,
           buttonName: AppText.signIn,
           onPressed: () {
-            Get.to(LoginScreen());
+            Get.offAll(LoginScreen());
           },
         ),
       ],
