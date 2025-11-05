@@ -1,5 +1,6 @@
 import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
+import 'package:fast_food/utlis/helper/app_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -18,8 +19,11 @@ class AppInputField extends StatelessWidget {
   final bool ispassword;
   final Icon prefixIcon;
 
+
   @override
   Widget build(BuildContext context) {
+    
+  final dark = AppHelper.isDarkMode(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -33,7 +37,7 @@ class AppInputField extends StatelessWidget {
           
 
           decoration: InputDecoration(
-            fillColor: AppColors.grey,
+            fillColor: dark == true? AppColors.dark: AppColors.grey,
             filled: true,
             hintText: hintText,
             hintStyle: Theme.of(context).textTheme.bodySmall,
