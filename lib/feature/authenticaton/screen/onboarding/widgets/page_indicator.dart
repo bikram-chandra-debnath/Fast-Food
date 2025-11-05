@@ -1,4 +1,5 @@
 import 'package:fast_food/feature/authenticaton/controller/onboarding/onboarding_coltroller.dart';
+import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/helper/device_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -10,7 +11,7 @@ class PageIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: DeviceHelper.getScreenHeight(context) / 6,
+      bottom: 120,
       left: DeviceHelper.getScreenWidth(context) / 2.5,
       right: DeviceHelper.getScreenWidth(context) / 2.5,
 
@@ -20,6 +21,7 @@ class PageIndicator extends StatelessWidget {
         count: 3,
         effect: ExpandingDotsEffect(
           dotHeight: 6.0,
+          activeDotColor: AppColors.primary
         ),
       ),
     );
