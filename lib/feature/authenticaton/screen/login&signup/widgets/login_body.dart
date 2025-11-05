@@ -23,6 +23,7 @@ class LoginBody extends StatelessWidget {
         SizedBox(height: AppSizes.spaceBtwInputFields),
         // password
         AppInputField(
+          obscureText: true,
           title: AppText.password,
           hintText: AppText.enterPassword,
           prefixIcon: Icon(Iconsax.password_check),
