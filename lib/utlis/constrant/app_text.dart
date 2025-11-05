@@ -49,7 +49,7 @@ static const String enterName = "Enter your full Name";
 static const  String phoneNumber = "Phone Number";
 static const  String enterPhoneNumber = "Enter your phone Number";
 
-static const String byCreating= "By creating an account, you agree t out ";
+static const String byCreating= "By creating an account, you agree to our ";
 static const String terms = "Terms and Conditions ";
 static const String and= "And ";
 static const String privacyNotice = "Privacy Notice";

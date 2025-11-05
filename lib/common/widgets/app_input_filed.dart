@@ -8,11 +8,13 @@ class AppInputField extends StatelessWidget {
     super.key,
     required this.title,
     required this.hintText,
+    this.obscureText = false,
     this.ispassword = false,
     required this.prefixIcon,
   });
 
   final String title, hintText;
+  final bool obscureText;
   final bool ispassword;
   final Icon prefixIcon;
 
@@ -27,7 +29,8 @@ class AppInputField extends StatelessWidget {
 
         // input password
         TextFormField(
-          obscureText: true,
+          obscureText: obscureText,
+          
 
           decoration: InputDecoration(
             fillColor: AppColors.grey,
@@ -35,9 +38,21 @@ class AppInputField extends StatelessWidget {
             hintText: hintText,
             hintStyle: Theme.of(context).textTheme.bodySmall,
             prefixIcon: prefixIcon,
+            
+            
 
             suffixIcon:
-                ispassword == true ? Icon(Iconsax.eye_slash) : SizedBox(),
+                ispassword == true
+                    ? IconButton(
+                      style: IconButton.styleFrom(
+                        padding: EdgeInsets.all(0),
+                      ),
+                      onPressed: () {},
+                      icon: Icon(
+                        obscureText == true ? Iconsax.eye : Iconsax.eye_slash,
+                      ),
+                    )
+                    :null,
           ),
         ),
       ],
