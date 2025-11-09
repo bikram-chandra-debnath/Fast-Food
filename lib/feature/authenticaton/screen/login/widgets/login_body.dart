@@ -1,6 +1,6 @@
 import 'package:fast_food/common/buttons/app_elevated_button.dart';
 import 'package:fast_food/common/widgets/app_input_filed.dart';
-import 'package:fast_food/feature/authenticaton/screen/login&signup/widgets/warning_and_forget.dart';
+import 'package:fast_food/feature/authenticaton/screen/login/widgets/warning_and_forget.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';

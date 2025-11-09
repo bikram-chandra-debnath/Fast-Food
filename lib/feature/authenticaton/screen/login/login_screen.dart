@@ -1,6 +1,6 @@
 import 'package:fast_food/common/widgets/login&signup/authentication_title_and_subtitle.dart';
-import 'package:fast_food/feature/authenticaton/screen/login&signup/widgets/login_body.dart';
-import 'package:fast_food/feature/authenticaton/screen/login&signup/widgets/login_options.dart';
+import 'package:fast_food/feature/authenticaton/screen/login/widgets/login_body.dart';
+import 'package:fast_food/feature/authenticaton/screen/login/widgets/login_options.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';

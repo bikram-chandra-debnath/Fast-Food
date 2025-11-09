@@ -1,5 +1,5 @@
 
-import 'package:fast_food/feature/authenticaton/screen/login&signup/login_screen.dart';
+import 'package:fast_food/feature/authenticaton/screen/login/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

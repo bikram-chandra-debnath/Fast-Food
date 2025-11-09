@@ -6,7 +6,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../login&signup/login_screen.dart';
+import '../../login/login_screen.dart';
 
 class SignupFooter extends StatelessWidget {
   const SignupFooter({super.key});
