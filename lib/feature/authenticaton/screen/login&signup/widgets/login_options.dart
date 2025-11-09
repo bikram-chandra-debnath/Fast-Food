@@ -1,5 +1,5 @@
 import 'package:fast_food/common/widgets/login&signup/login&signup_lable.dart';
-import 'package:fast_food/feature/authenticaton/screen/login&signup/signup_screen.dart';
+import 'package:fast_food/feature/authenticaton/screen/signup/signup_screen.dart';
 import 'package:fast_food/feature/authenticaton/screen/login&signup/widgets/social_login.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
