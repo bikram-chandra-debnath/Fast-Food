@@ -56,4 +56,11 @@ static const String privacyNotice = "Privacy Notice";
 
 static const String alreadyHave= "Already have account? ";
 
+// forget password
+
+static const String forgetTitle ="Forget password";
+static const String forgetSubtitle ="No worries! Enter your registerred email address, and we'll help you reset your password";
+static const String submit = "Submit";
+
+
 }
