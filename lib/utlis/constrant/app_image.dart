@@ -13,5 +13,10 @@ static const String apple = "assets/icon/apple-logo.png";
 static const String facebook = "assets/icon/facebook.png";
 
 
+// animations
+
+static const String verifyEmail ="assets/animations/verify_email.json";
+
+
 
 }

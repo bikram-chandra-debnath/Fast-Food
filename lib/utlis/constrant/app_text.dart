@@ -61,6 +61,10 @@ static const String alreadyHave= "Already have account? ";
 static const String forgetTitle ="Forget password";
 static const String forgetSubtitle ="No worries! Enter your registerred email address, and we'll help you reset your password";
 static const String submit = "Submit";
-
-
+static const String emailVerify = "Email Verify";
+static const String sendEmail = "Password recovery mail sent your e-mail";
+static const String openMail = "Open mail and recover your password";
+static const String done = "Done";
+static const String reSend = "Re Send";
+ 
 }
