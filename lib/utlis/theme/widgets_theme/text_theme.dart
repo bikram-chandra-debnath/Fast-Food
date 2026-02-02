@@ -5,9 +5,13 @@ class AppTextTheme {
   AppTextTheme._();
 
 
-    static TextTheme lightTextTheme =TextTheme(
+    static TextTheme lightTextTheme =
 
-    headlineLarge: TextStyle().copyWith(fontSize: 32.0,fontWeight: FontWeight.bold,color: AppColors.dark),
+    TextTheme(
+
+
+
+    headlineLarge: TextStyle().copyWith(fontSize: 32.0,fontWeight: FontWeight.bold,color: AppColors.dark, ),
     headlineMedium: TextStyle().copyWith(fontSize: 24.0,fontWeight: FontWeight.w600,color: AppColors.dark),
     headlineSmall: TextStyle().copyWith(fontSize: 18.0,fontWeight: FontWeight.w600,color: AppColors.dark),
 

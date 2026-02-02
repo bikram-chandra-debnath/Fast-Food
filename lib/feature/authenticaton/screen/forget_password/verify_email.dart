@@ -6,7 +6,6 @@ import 'package:fast_food/utlis/constrant/app_image.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:fast_food/utlis/helper/device_helper.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -17,21 +16,6 @@ class VerifyEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-            onPressed: () {
-              Get.offAll(LoginScreen());
-            },
-            icon: Padding(
-              padding: const EdgeInsets.only(right: AppSizes.defaultSpace),
-              child: Icon(CupertinoIcons.clear),
-            ),
-          ),
-        ],
-      ),
-
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
         child: Column(
@@ -53,7 +37,7 @@ class VerifyEmail extends StatelessWidget {
               title: AppText.emailVerify,
               style: Theme.of(context).textTheme.headlineMedium!.copyWith(),
             ),
-            SizedBox(height: AppSizes.spaceBtwItems,),
+            SizedBox(height: AppSizes.spaceBtwItems),
 
             //subtitle
             AppSubTitle(subTitle: AppText.sendEmail),
@@ -63,12 +47,13 @@ class VerifyEmail extends StatelessWidget {
             ),
             AppSubTitle(subTitle: AppText.openMail),
 
-
-            SizedBox(height: AppSizes.spaceBtwItems,),
+            SizedBox(height: AppSizes.spaceBtwItems),
 
             // buttons
-            AppElevatedButton(onPressed: ()=> Get.offAll(LoginScreen()), child: Text(AppText.done)),
-            TextButton(onPressed: () {}, child: Text(AppText.reSend)),
+            AppElevatedButton(
+              onPressed: () => Get.offAll(LoginScreen()),
+              child: Text(AppText.done),
+            ),
           ],
         ),
       ),

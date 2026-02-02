@@ -1,4 +1,4 @@
-import 'package:fast_food/common/widgets/login&signup/authentication_title_and_subtitle.dart';
+import 'package:fast_food/common/widgets/login&signup/authentication_header_container.dart';
 import 'package:fast_food/feature/authenticaton/screen/signup/widgets/signup_footer.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
@@ -12,31 +12,35 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(elevation: 0),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              // ---------[Header section]------
-              AuthenticationTitleAndSubtitle(
-                title: AppText.signUpTitle,
-                subTitle: AppText.signUpSubTitle,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // ---------[Header section]------
+            CustomAutheticationHeaderContainer(
+              isback: true,
+              title: AppText.signUpTitle,
+              subtitle: AppText.signUpSubTitle,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSizes.defaultSpace,
               ),
-              SizedBox(height: AppSizes.spaceBtwSections),
+              child: Column(
+                children: [
+                  // ---------[Body section]------
+                  SignupBody(),
 
-              // ---------[Body section]------
-              SignupBody(),
+                  //---------[Footer section]------
 
-              //---------[Footer section]------
-
-              // check box & terms
-              SignupFooter(),
-            ],
-          ),
+                  // check box & terms
+                  SignupFooter(),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
-

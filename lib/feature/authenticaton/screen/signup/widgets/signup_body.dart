@@ -3,7 +3,10 @@ import 'package:fast_food/common/widgets/app_input_filed.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+
+import '../../login/login_screen.dart';
 
 class SignupBody extends StatelessWidget {
   const SignupBody({super.key});
@@ -40,7 +43,10 @@ class SignupBody extends StatelessWidget {
         SizedBox(height: AppSizes.spaceBtwSections),
 
         // SignUp Button
-        AppElevatedButton(onPressed: () {}, child: Text(AppText.signUp)),
+        AppElevatedButton(
+          onPressed: () => Get.offAll(() => LoginScreen()),
+          child: Text(AppText.signUp),
+        ),
       ],
     );
   }

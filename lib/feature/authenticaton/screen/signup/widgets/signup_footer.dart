@@ -29,7 +29,7 @@ class SignupFooter extends StatelessWidget {
         // old accoun Login 
         SignUpOrSignIn(
           label: AppText.alreadyHave,
-          buttonName: AppText.signIn,
+          buttonName: AppText.login,
           onPressed: () {
             Get.offAll(LoginScreen());
           },

@@ -1,19 +1,23 @@
 class AppText {
-
   AppText._();
 
   //                          ------[Onboarding Screen]--------
 
-// onboardig title
-  static const String onboarding1Title = "Discover Deliciousness Anytime,Anywhere";
+  // onboardig title
+  static const String onboarding1Title =
+      "Discover Deliciousness Anytime,Anywhere";
   static const String onboarding2Title = "Order with Ease, Anytime you Crave";
-  static const String onboarding3Title = "Track and Enjoy Every Bite of the Journey";
+  static const String onboarding3Title =
+      "Track and Enjoy Every Bite of the Journey";
 
   // onboarding subtitle
 
-  static const String onboarding1Subtitle = "Explore endless food options, order in secons, and enjoy quick delivery straight to your door.";
-  static const String onboarding2Subtitle = "Discover new tastes, customixe your meals, and track your order in real-time with ease.";
-  static const String onboarding3Subtitle = "From breakfast to dinner, find your favorite dishes and get theme delivered fast and fresh.";
+  static const String onboarding1Subtitle =
+      "Explore endless food options, order in secons, and enjoy quick delivery straight to your door.";
+  static const String onboarding2Subtitle =
+      "Discover new tastes, customixe your meals, and track your order in real-time with ease.";
+  static const String onboarding3Subtitle =
+      "From breakfast to dinner, find your favorite dishes and get theme delivered fast and fresh.";
 
   // Buttons
 
@@ -21,50 +25,54 @@ class AppText {
   static const String appContinue = "Continue";
   static const String getStarted = "Get Started";
 
+  //                 ---------[Authentication Screen]---------
 
-//                 ---------[Authentication Screen]---------
+  static const String email = "Email";
+  static const String password = "Password";
+  static const String login = "Login";
+  static const String signUp = "Sign Up";
+  static const String enterEmail = "example@gmail.com";
+  static const String enterPassword = "Enter your password";
 
+  // login
+  static const String loginTitle = "Welcome Back!";
+  static const String loginSubTitle =
+      "Glad to havea yyou here again. Let's get Started";
+  static const String incorrectPassword = "*Incorrect Password";
+  static const String forgetPassword = "Forget Password?";
+  static const String orContinue = "Or Continue with";
+  static const String donotHaveAccount = "Don't have account?";
+  static const String remember = "Remember Me";
 
-static const String email ="Email";
-static const String password = "Password";
-static const String signIn= "Sign In";
-static const String signUp= "Sign Up";
-static const String enterEmail = "Enter your email";
-static const String enterPassword = "Enter your password";
+  // signup
+  static const String signUpTitle = "Create Your Account";
+  static const String signUpSubTitle =
+      "Join us today and unlock endless possibilities. It's quick, easy, and just step away!";
+  static const String fullName = "Full Name";
+  static const String enterName = "Enter your full Name";
+  static const String phoneNumber = "Phone Number";
+  static const String enterPhoneNumber = "Enter your phone Number";
 
+  static const String byCreating = "By creating an account, you agree to our ";
+  static const String terms = "Terms and Conditions ";
+  static const String and = "And ";
+  static const String privacyNotice = "Privacy Notice";
 
-// login
-static const String loginTitle ="Welcome Back!";
-static const String loginSubTitle ="Glad to havea yyou here again. Let's get Started";
-static const String incorrectPassword = "*Incorrect Password";
-static const String forgetPassword = "Forget Password?";
-static const String orContinue = "Or Continue with";
-static const String donotHaveAccount  ="Don't have account?";
+  static const String alreadyHave = "Already have account? ";
 
-// signup
-static const String signUpTitle ="Create Your Account";
-static const String signUpSubTitle ="Join us today and unlock endless possibilities. It's quick, easy, and just step away!";
-static const String fullName = "Full Name";
-static const String enterName = "Enter your full Name";
-static const  String phoneNumber = "Phone Number";
-static const  String enterPhoneNumber = "Enter your phone Number";
+  // forget password
 
-static const String byCreating= "By creating an account, you agree to our ";
-static const String terms = "Terms and Conditions ";
-static const String and= "And ";
-static const String privacyNotice = "Privacy Notice";
-
-static const String alreadyHave= "Already have account? ";
-
-// forget password
-
-static const String forgetTitle ="Forget password";
-static const String forgetSubtitle ="No worries! Enter your registerred email address, and we'll help you reset your password";
-static const String submit = "Submit";
-static const String emailVerify = "Email Verify";
-static const String sendEmail = "Password recovery mail sent your e-mail";
-static const String openMail = "Open mail and recover your password";
-static const String done = "Done";
-static const String reSend = "Re Send";
- 
+  static const String forgetTitle = "Forget password";
+  static const String forgetSubtitle =
+      "No worries! Enter your registerred email address, and we'll help you reset your password";
+  static const String submit = "Submit";
+  static const String sendCode = "Send Code";
+  static const String verification = "Verification";
+  static const String verificationCode = "We have sent a code to your email";
+  static const String enterCode = "Email";
+  static const String emailVerify = "Email Verify";
+  static const String sendEmail = "Password recovery mail sent your e-mail";
+  static const String openMail = "Open mail and recover your password";
+  static const String done = "Done";
+  static const String reSend = "Re Send";
 }

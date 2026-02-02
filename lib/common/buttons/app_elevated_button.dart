@@ -1,4 +1,5 @@
 
+import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppElevatedButton extends StatelessWidget {
@@ -17,8 +18,10 @@ class AppElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: AppColors.primary,
           foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),),
+
         ),
         child: child
       ),

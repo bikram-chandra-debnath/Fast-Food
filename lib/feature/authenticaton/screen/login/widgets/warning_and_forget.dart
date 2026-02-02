@@ -14,12 +14,21 @@ class WarningAndForget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        // warning
-        Text(
-          AppText.incorrectPassword,
-          style: Theme.of(
-            context,
-          ).textTheme.bodyLarge!.copyWith(color: AppColors.error),
+        // remember
+        Row(
+          children: [
+            Checkbox(
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+              value: false,
+              onChanged: (value) {},
+            ),
+            Text(
+              AppText.remember,
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium!.copyWith(),
+            ),
+          ],
         ),
         // forget password
         TextButton(

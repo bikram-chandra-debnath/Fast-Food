@@ -10,30 +10,37 @@ class AuthenticationTitleAndSubtitle extends StatelessWidget {
     required this.title,
     required this.subTitle,
     this.isIcon = false,
+    this.titleColor = AppColors.black,
+    this.child = const SizedBox(),
   });
 
   final String title, subTitle;
   final bool isIcon;
+  final Color titleColor;
+
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Row(
-          children: [
-            AppTitle(
-              title: title,
-              style: Theme.of(context).textTheme.headlineLarge!.copyWith(),
-            ),
-            SizedBox(width: AppSizes.spaceBtwItems),
-            isIcon == true
-                ? Icon(Icons.waving_hand, color: AppColors.warning)
-                : SizedBox(),
-          ],
+        AppTitle(
+          title: title,
+          style: Theme.of(
+            context,
+          ).textTheme.headlineLarge!.copyWith(color: titleColor),
+          textAlign: TextAlign.center,
         ),
-        SizedBox(height: AppSizes.spaceBtwItems),
-        AppSubTitle(subTitle: subTitle),
+
+        SizedBox(height: AppSizes.spaceBtwItems / 2),
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSizes.defaultSpace,
+          ),
+          child: AppSubTitle(subTitle: subTitle, textAlign: TextAlign.center),
+        ),
+        child,
       ],
     );
   }

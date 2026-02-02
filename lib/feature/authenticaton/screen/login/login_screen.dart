@@ -1,9 +1,9 @@
-import 'package:fast_food/common/widgets/login&signup/authentication_title_and_subtitle.dart';
 import 'package:fast_food/feature/authenticaton/screen/login/widgets/login_body.dart';
 import 'package:fast_food/feature/authenticaton/screen/login/widgets/login_options.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
+import '../../../../common/widgets/login&signup/authentication_header_container.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -11,29 +11,32 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(elevation: 0),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
 
-            children: [
-              // --------[Header section]-----
-              AuthenticationTitleAndSubtitle(title: AppText.loginTitle, subTitle: AppText.loginSubTitle,isIcon: true,),
+          children: [
+            // header section
+            CustomAutheticationHeaderContainer(
+              title: AppText.loginTitle,
+              subtitle: AppText.loginSubTitle,
+            ),
 
-              SizedBox(height: AppSizes.spaceBtwSections),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
+              child: Column(
+                children: [
+                  //-------[Body Section]--------
+                  LoginBody(),
 
-              //-------[Body Section]--------
-              LoginBody(),
-
-              // ------[Footer section]-----
-              LoginOptions(),
-            ],
-          ),
+                  // ------[Footer section]-----
+                  LoginOptions(),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
-

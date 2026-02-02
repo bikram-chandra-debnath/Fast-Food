@@ -35,7 +35,7 @@ class LoginBody extends StatelessWidget {
         SizedBox(height: AppSizes.spaceBtwSections),
 
         //Sign In Button
-        AppElevatedButton(onPressed: () {}, child: Text(AppText.signIn)),
+        AppElevatedButton(onPressed: () {}, child: Text(AppText.login)),
 
         SizedBox(height: AppSizes.spaceBtwSections),
       ],
