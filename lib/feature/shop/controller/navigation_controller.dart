@@ -1,3 +1,4 @@
+import 'package:fast_food/feature/shop/screen/home/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class AppNavigationController extends GetxController{
 
    RxList pages = [
 
-     Center( child: Text("Home page"), ),
+     HomeScreen(),
      Center( child: Text("search page"), ),
      Center( child: Text("Favourite page"), ),
      Center( child: Text("profile page"), ),

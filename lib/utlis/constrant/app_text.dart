@@ -79,4 +79,17 @@ class AppText {
   static const String openMail = "Open mail and recover your password";
   static const String done = "Done";
   static const String reSend = "Re Send";
+
+
+
+  // ---------[Shop screens]--------
+
+// home screen
+
+  static const String  deliverTo = "Delivery To";
+
+
 }
+
+
+
