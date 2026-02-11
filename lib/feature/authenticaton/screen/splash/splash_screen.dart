@@ -1,18 +1,18 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:fast_food/data/repository/authetication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 import '../../../../utlis/constrant/app_colors.dart';
 import '../../../../utlis/constrant/app_image.dart';
-import '../../controller/splash/splash_controller.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(SplashController());
+    Get.put(AuthenticationRepositor());
     return Scaffold(
       backgroundColor: AppColors.white,
       body: Stack(

@@ -29,6 +29,8 @@ class AppText {
 
   static const String email = "Email";
   static const String password = "Password";
+  static const String confirmPassword = "Confirm password";
+  static const String reTypePassword = "Re-Type your password";
   static const String login = "Login";
   static const String signUp = "Sign Up";
   static const String enterEmail = "example@gmail.com";
@@ -48,8 +50,10 @@ class AppText {
   static const String signUpTitle = "Create Your Account";
   static const String signUpSubTitle =
       "Join us today and unlock endless possibilities. It's quick, easy, and just step away!";
-  static const String fullName = "Full Name";
-  static const String enterName = "Enter your full Name";
+  static const String firstName = "First Name";
+  static const String lastName = "Last Name";
+  static const String enterFirstName = "Enter your first name";
+  static const String enterLastName = "Enter your last name";
   static const String phoneNumber = "Phone Number";
   static const String enterPhoneNumber = "Enter your phone Number";
 

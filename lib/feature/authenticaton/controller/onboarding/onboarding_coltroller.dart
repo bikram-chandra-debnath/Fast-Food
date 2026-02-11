@@ -2,12 +2,16 @@
 import 'package:fast_food/feature/authenticaton/screen/login/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class OnboardingColtroller extends  GetxController{
 
   static OnboardingColtroller get instance => Get.find();
 
   final pageController = PageController();
+  final localStorage = GetStorage();
+
+
 
   RxInt currentIndex = 0.obs;
 
@@ -24,10 +28,15 @@ class OnboardingColtroller extends  GetxController{
   }
  //// next page
   void nextPage (){
+    localStorage.write('isFirstTime', false);
+    if(currentIndex.value == 2){
 
-    currentIndex.value < 2
-        ? currentIndex.value++
-        : Get.offAll(LoginScreen());
+      Get.offAll(LoginScreen());
+      return;
+    }
+
+      currentIndex.value++;
+
     pageController.jumpToPage(currentIndex.value);
   }
   //  jump to the last page
