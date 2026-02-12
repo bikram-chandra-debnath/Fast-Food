@@ -78,6 +78,7 @@ flutter:
     - assets/onboarding/
     - assets/icon/
     - assets/icon/svg/
+    - assets/products/
     - assets/shapes/
     - assets/logo/
     - assets/animations/

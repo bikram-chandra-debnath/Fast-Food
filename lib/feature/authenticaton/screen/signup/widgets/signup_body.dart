@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../login/login_screen.dart';
 
 class SignupBody extends StatelessWidget {
   const SignupBody({super.key});

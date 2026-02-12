@@ -25,4 +25,10 @@ class AppImage {
   // animations
 
   static const String verifyEmail = "assets/animations/verify_email.json";
+
+
+/// products
+
+
+static const String burger = "assets/products/burger.png";
 }

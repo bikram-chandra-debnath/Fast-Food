@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-
 import '../common/buttons/circular_Icon_button.dart';
 import '../utlis/constrant/app_colors.dart';
 import '../utlis/constrant/app_size.dart';
 import '../utlis/constrant/app_text.dart';
 import '../utlis/helper/device_helper.dart';
+
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -38,7 +37,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(DeviceHelper.getAppBarHeight());
 }
 

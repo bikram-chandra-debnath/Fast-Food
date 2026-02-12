@@ -86,7 +86,11 @@ class AppText {
 
 // home screen
 
-  static const String  deliverTo = "Delivery To";
+  static const String  deliverTo = "DELIVER TO";
+  static const String  allCategories = "All Categories";
+  static const String seeAll = "See All";
+
+
 
 
 }
