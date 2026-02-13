@@ -79,6 +79,7 @@ flutter:
     - assets/icon/
     - assets/icon/svg/
     - assets/products/
+    - assets/restaurants/
     - assets/shapes/
     - assets/logo/
     - assets/animations/

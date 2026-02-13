@@ -88,6 +88,7 @@ class AppText {
 
   static const String  deliverTo = "DELIVER TO";
   static const String  allCategories = "All Categories";
+  static const String  openRestaurants = "Open Restaurants";
   static const String seeAll = "See All";
 
 

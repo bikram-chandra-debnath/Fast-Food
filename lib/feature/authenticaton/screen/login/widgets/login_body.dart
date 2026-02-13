@@ -1,7 +1,7 @@
 import 'package:fast_food/common/buttons/app_elevated_button.dart';
 import 'package:fast_food/common/widgets/app_input_filed.dart';
 import 'package:fast_food/feature/authenticaton/screen/login/widgets/warning_and_forget.dart';
-import 'package:fast_food/feature/shop/screen/navigation_bar.dart';
+import 'package:fast_food/feature/shop/screen/home/home_screen.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +37,7 @@ class LoginBody extends StatelessWidget {
         SizedBox(height: AppSizes.spaceBtwSections),
 
         //Sign In Button
-        AppElevatedButton(onPressed: ()=> Get.offAll(()=> AppNavigationBar()), child: Text(AppText.login)),
+        AppElevatedButton(onPressed: ()=> Get.offAll(()=> HomeScreen()), child: Text(AppText.login)),
 
         SizedBox(height: AppSizes.spaceBtwSections),
       ],
