@@ -1,4 +1,5 @@
 
+import 'package:fast_food/common/widgets/shop/rating.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,17 +18,11 @@ class RatingAndDeliveryTime extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Row(
-          children: [
-            SvgPicture.asset("assets/icon/svg/star.svg", fit: BoxFit.cover),
-            SizedBox(width: 5),
-            Text(reating, style: Theme.of(context).textTheme.titleLarge),
-          ],
-        ),
+        AppRating(reating: reating),
         SizedBox(width: AppSizes.spaceBtwItems),
         Row(
           children: [
-            SvgPicture.asset("assets/icon/svg/delivery.svg", fit: BoxFit.cover),
+            SvgPicture.asset("assets/icon/svg/delivery.svg",),
             SizedBox(width: 5),
             Text(deliveryCharge, style: Theme.of(context).textTheme.titleLarge),
           ],
@@ -35,7 +30,7 @@ class RatingAndDeliveryTime extends StatelessWidget {
         SizedBox(width: AppSizes.spaceBtwItems),
         Row(
           children: [
-            SvgPicture.asset("assets/icon/svg/time.svg", fit: BoxFit.cover),
+            SvgPicture.asset("assets/icon/svg/time.svg", ),
             SizedBox(width: 5),
             Text("$time min", style: Theme.of(context).textTheme.titleLarge),
           ],
