@@ -18,7 +18,7 @@ class RatingAndDeliveryTime extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        AppRating(reating: reating),
+        AppRating(rating: reating),
         SizedBox(width: AppSizes.spaceBtwItems),
         Row(
           children: [

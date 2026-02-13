@@ -1,8 +1,10 @@
 
+import 'package:fast_food/feature/shop/screen/search/search_screen.dart';
 import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class SearchButton extends StatelessWidget {
   const SearchButton({
@@ -12,9 +14,7 @@ class SearchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        
-      },
+      onTap: () => Get.to(()=> SearchScreen()),
       child: Container(
        height: 60,
        width: double.maxFinite,
@@ -28,7 +28,9 @@ class SearchButton extends StatelessWidget {
            padding: const EdgeInsets.symmetric(horizontal: AppSizes.spaceBtwItems),
            child: Row(
              children: [
-               SvgPicture.asset("assets/icon/svg/search.svg"),
+               Hero(
+                tag:  "search_tag",
+                child: SvgPicture.asset("assets/icon/svg/search.svg")),
                SizedBox(width: AppSizes.sm,), 
                Text("Search dishes, restaurants",style: Theme.of(context).textTheme.bodySmall,)
              ],

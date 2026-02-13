@@ -5,10 +5,10 @@ import 'package:flutter_svg/svg.dart';
 class AppRating extends StatelessWidget {
   const AppRating({
     super.key,
-    required this.reating,
+    required this.rating,
   });
 
-  final String reating;
+  final String rating;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class AppRating extends StatelessWidget {
       children: [
         SvgPicture.asset("assets/icon/svg/star.svg",),
         SizedBox(width: 5),
-        Text(reating, style: Theme.of(context).textTheme.titleLarge),
+        Text(rating, style: Theme.of(context).textTheme.titleLarge),
       ],
     );
   }

@@ -92,6 +92,15 @@ class AppText {
   static const String seeAll = "See All";
 
 
+  // search
+
+  static const String search = "Search";
+  static const String recentKeywords = "Recent Keywords";
+  static const String suggestedRestaurants = "Suggested Restaurants";
+  static const String popularFastfood = "Popular Fast food";
+
+
+
 
 
 }
