@@ -1,7 +1,7 @@
 import 'package:fast_food/appbar/custom_appbar.dart';
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
 import 'package:fast_food/common/search/search_box.dart';
-import 'package:fast_food/common/widgets/shop/section_heading.dart';
+import 'package:fast_food/feature/shop/screen/search/widgets/fast_food_section.dart';
 import 'package:fast_food/feature/shop/screen/search/widgets/recent_keywordSection.dart';
 import 'package:fast_food/feature/shop/screen/search/widgets/suggested_restaurant_section.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
@@ -47,10 +47,9 @@ class SearchScreen extends StatelessWidget {
               SizedBox(height: AppSizes.spaceBtwSections / 1.5),
 
               // Popular Fast Food
+              PopularFastFoodSection(),
 
-             
-
-
+              SizedBox(height: AppSizes.spaceBtwSections / 1.5),
             ],
           ),
         ),
