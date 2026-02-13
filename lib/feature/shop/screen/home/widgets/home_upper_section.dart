@@ -1,5 +1,5 @@
 
-import 'package:fast_food/common/search/search_box.dart';
+import 'package:fast_food/feature/shop/screen/home/widgets/search_button.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:flutter/material.dart';
 
@@ -32,8 +32,9 @@ class HomeUpperSection extends StatelessWidget {
             
       SizedBox(height: AppSizes.spaceBtwSections / 2),
             
-      // search box
-      AppSearchBox(),
+      // search button
+
+     SearchButton(),
             
       SizedBox(height: AppSizes.spaceBtwSections / 2),
             
