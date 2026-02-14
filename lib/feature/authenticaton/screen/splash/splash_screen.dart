@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:animate_do/animate_do.dart';
 import 'package:fast_food/data/repository/authetication_repository.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +14,31 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Timer(Duration(seconds: 2), () => Get.to(SeconderySplashScreen()));
+
+    return Scaffold(
+      backgroundColor: AppColors.white,
+      body: Stack(
+        children: [
+          // AppLogo
+          Align(
+            alignment: Alignment.center,
+            child: Hero(
+              tag: "splash_logo",
+              child: SvgPicture.asset(AppImage.logo, width: 122, height: 59),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SeconderySplashScreen extends StatelessWidget {
+  const SeconderySplashScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
     Get.put(AuthenticationRepositor());
     return Scaffold(
       backgroundColor: AppColors.white,
@@ -20,7 +47,10 @@ class SplashScreen extends StatelessWidget {
           // AppLogo
           Align(
             alignment: Alignment.center,
-            child: SvgPicture.asset(AppImage.logo, width: 122, height: 59),
+            child: Hero(
+              tag: "splash_logo",
+              child: SvgPicture.asset(AppImage.logo, width: 122, height: 59),
+            ),
           ),
           // yellow sun shape
           Positioned(
