@@ -2,17 +2,6 @@ dev_dependencies:
   flutter_native_splash: ^2.4.0
 
 flutter_native_splash:
-  color: "#ffffff"
-  color_dark: "#042a49"
-  image: assets/logo/logo3.png
+  color: "#000000"  
   android: true
   ios: true
-  web: false
-  android_gravity: center
-  ios_content_mode: scaleAspectFit
-
-  android_12:
-    image: assets/logo/logo3.png
-    image_dark: assets/logo/logo3.png
-    icon_background_color: "#ffffff"
-    icon_background_color_dark: "#042a49"
