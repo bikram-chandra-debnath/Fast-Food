@@ -8,12 +8,12 @@ class ProductCard extends StatelessWidget {
     required this.image,
     required this.title,
     this.child, 
-    this.subTitle ,
+    this.description ,
   });
 
   final String? image;
   final String title;
-  final String? subTitle;
+  final String? description;
 
   final Widget? child;
 
@@ -67,7 +67,7 @@ class ProductCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
-                  subTitle??"",
+                  description??"",
                   style: Theme.of(context).textTheme.bodyMedium,
                   overflow: TextOverflow.ellipsis,
                 ),

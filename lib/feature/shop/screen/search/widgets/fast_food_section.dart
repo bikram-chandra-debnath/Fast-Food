@@ -36,7 +36,7 @@ class PopularFastFoodSection extends StatelessWidget {
                 (context, index) => ProductCard(
                   image: "assets/products/burger.png",
                   title: "European Burger",
-                  subTitle: "Uttora Coffe House",
+                  description: "Uttora Coffe House",
                 ),
           ),
         ),
