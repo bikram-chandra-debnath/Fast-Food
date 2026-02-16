@@ -38,4 +38,8 @@ class AppColors {
   static const Color lightGrey = Color(0xfff9f9f9);
   static const Color white = Color(0xffffffff);
   static const Color darkNavy = Color(0xff1E1E2E);
+
+  // button background
+
+  static const Color buttonBackground = Color(0xffFFE194);
 }
