@@ -4,11 +4,14 @@ import 'package:flutter/material.dart';
 
 class AppElevatedButton extends StatelessWidget {
   const AppElevatedButton({
-    super.key, required this.onPressed, required this.child,
+    super.key, required this.onPressed, required this.child, this.padding, this.minimumSize, this.tapTargetSize,
   });
 
   final VoidCallback onPressed;
   final Widget child;
+  final EdgeInsetsGeometry? padding;
+  final Size? minimumSize;
+  final MaterialTapTargetSize? tapTargetSize;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +24,10 @@ class AppElevatedButton extends StatelessWidget {
           backgroundColor: AppColors.primary,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),),
+
+          padding: padding,
+          minimumSize: minimumSize,
+          tapTargetSize: tapTargetSize
 
         ),
         child: child
