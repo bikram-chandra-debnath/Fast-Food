@@ -9,20 +9,21 @@ class AppCircularIconButton extends StatelessWidget {
     required this.icon,
     this.backgroundColor = AppColors.darkerGrey,
     this.color,
-    required this.onPressed,
+    required this.onPressed,  this.width=45,  this.height=45,
   });
 
   final Widget icon;
   final Color backgroundColor;
   final Color? color;
   final VoidCallback onPressed;
+  final double width,height;
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       style: IconButton.styleFrom(
         backgroundColor: backgroundColor,
-        fixedSize: Size(45, 45),
+        fixedSize: Size(width, height),
         foregroundColor: color,
       ),
       onPressed: onPressed,
