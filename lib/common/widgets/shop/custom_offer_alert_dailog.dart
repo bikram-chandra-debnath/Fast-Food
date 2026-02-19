@@ -49,6 +49,7 @@ class CustomOfferAlertDailog extends StatelessWidget {
                         ).textTheme.displaySmall!.copyWith(
                           color: AppColors.white,
                           fontWeight: FontWeight.w900,
+                          fontSize: 30
                         ),
                       ),
                       SizedBox(height: AppSizes.spaceBtwSections,),
