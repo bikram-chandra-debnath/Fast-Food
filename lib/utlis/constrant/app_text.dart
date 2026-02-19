@@ -80,17 +80,14 @@ class AppText {
   static const String done = "Done";
   static const String reSend = "Re Send";
 
-
-
   // ---------[Shop screens]--------
 
-// home screen
+  // home screen
 
-  static const String  deliverTo = "DELIVER TO";
-  static const String  allCategories = "All Categories";
-  static const String  openRestaurants = "Open Restaurants";
+  static const String deliverTo = "DELIVER TO";
+  static const String allCategories = "All Categories";
+  static const String openRestaurants = "Open Restaurants";
   static const String seeAll = "See All";
-
 
   // search
 
@@ -99,11 +96,13 @@ class AppText {
   static const String suggestedRestaurants = "Suggested Restaurants";
   static const String popularFastfood = "Popular Fast food";
 
-
-
-
-
+  // Cart Screen
+  static const String cart = "Cart";
+  static const String editItems = "EDIT ITEMS";
+  static const String doneCapital = "DONE";
+  static const String deliveryAddress = "DELIVERY ADDRESS";
+  static const String editCapital = "EDIT";
+  static const String totalCapital = "TOTAL:    ";
+  static const String placeOrderCapital = "PLACE ORDER";
+  static const String breakdown = "Breakdown";
 }
-
-
-

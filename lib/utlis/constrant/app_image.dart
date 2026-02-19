@@ -26,9 +26,13 @@ class AppImage {
 
   static const String verifyEmail = "assets/animations/verify_email.json";
 
+  // icon
 
-/// products
+  static const String arrowBack = "assets/icon/svg/arrow_back.svg";
+  static const String arrowBackWhite = "assets/icon/svg/arrow_back_white.svg";
+  static const String crossWhite = "assets/icon/svg/cross_white.svg";
 
+  /// products
 
-static const String burger = "assets/products/burger.png";
+  static const String burger = "assets/products/burger.png";
 }

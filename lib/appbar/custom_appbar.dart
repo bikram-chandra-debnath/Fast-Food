@@ -1,5 +1,7 @@
+import 'package:fast_food/feature/shop/screen/cart/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import '../common/buttons/circular_Icon_button.dart';
 import '../utlis/constrant/app_colors.dart';
 import '../utlis/constrant/app_size.dart';
@@ -56,7 +58,7 @@ class AppCartButton extends StatelessWidget {
               icon: SvgPicture.asset("assets/icon/svg/cart.svg"),
               backgroundColor: AppColors.black,
               color: AppColors.white,
-              onPressed: () {},
+              onPressed: ()  => Get.to (()=> CartScreen())
             ),
 
             Positioned(

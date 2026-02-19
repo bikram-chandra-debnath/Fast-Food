@@ -5,6 +5,7 @@ class AppColors {
 
   //primary color
   static const primary = Color(0xffFF7622);
+  static const background = Color(0xff121223);
 
   // text colors
 
@@ -20,6 +21,9 @@ class AppColors {
 
   static const Color buttonPrimary = Color(0xff0857a0);
   static const Color buttonDisabled = Color(0xffc4c4c4);
+  static const Color buttonOrange = Color(0xffFF7622);
+  static const Color buttonDone = Color(0xff059C6A);
+  static const Color buttonCancle = Color(0xffE04444);
 
   // error and validation colors
 
@@ -42,4 +46,5 @@ class AppColors {
   // button background
 
   static const Color buttonBackground = Color(0xffFFE194);
+  static const Color lightBlack = Color(0xff292939);
 }
