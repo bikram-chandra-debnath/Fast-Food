@@ -1,4 +1,5 @@
 import 'package:fast_food/common/buttons/app_elevated_button.dart';
+import 'package:fast_food/common/buttons/text_button.dart';
 import 'package:fast_food/common/widgets/app_data_show_container.dart';
 import 'package:fast_food/feature/shop/screen/cart/widgets/breakdown_button.dart';
 import 'package:fast_food/feature/shop/screen/cart/widgets/total_cart_amount.dart';
@@ -30,22 +31,7 @@ class AppCustomBottomSheet extends StatelessWidget {
                   context,
                 ).textTheme.bodyLarge!.copyWith(color: AppColors.darkGrey),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                  minimumSize: Size.zero,
-                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                ),
-                onPressed: () {},
-                child: Text(
-                  AppText.editCapital,
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                    color: AppColors.buttonOrange,
-                    decoration: TextDecoration.underline,
-                    decorationColor: AppColors.buttonOrange,
-                  ),
-                ),
-              ),
+              CustomTextButton(onPressed: () {}, text: AppText.editCapital),
             ],
           ),
           SizedBox(height: AppSizes.spaceBtwItems),
@@ -98,3 +84,4 @@ class AppCustomBottomSheet extends StatelessWidget {
     );
   }
 }
+
