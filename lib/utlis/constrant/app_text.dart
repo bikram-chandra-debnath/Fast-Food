@@ -109,7 +109,7 @@ class AppText {
   // profile screen
 
   static const String profile= "Profile";
-  static const String personInfo= "Person Info";
+  static const String personInfo= "Personal Info";
   static const String address= "Address";
   static const String favorite= "Favorite";
   static const String notifications= "Notifications";
@@ -118,5 +118,11 @@ class AppText {
   static const String userReview= "User Review";
   static const String settings= "Settings";
   static const String logout= "Logout";
+
+  // personal info screen
+
+  static const String fullNameCapital = "FULL NAME";
+  static const String emailCapital = "EMAIL";
+  static const String phoneNumberCapitla = "PHONE NUMBER";
 
 }
