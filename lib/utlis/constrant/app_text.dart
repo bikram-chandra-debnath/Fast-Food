@@ -105,4 +105,18 @@ class AppText {
   static const String totalCapital = "TOTAL:    ";
   static const String placeOrderCapital = "PLACE ORDER";
   static const String breakdown = "Breakdown";
+
+  // profile screen
+
+  static const String profile= "Profile";
+  static const String personInfo= "Person Info";
+  static const String address= "Address";
+  static const String favorite= "Favorite";
+  static const String notifications= "Notifications";
+  static const String paymentMethod= "Payment Method";
+  static const String faqS= "FAQs";
+  static const String userReview= "User Review";
+  static const String settings= "Settings";
+  static const String logout= "Logout";
+
 }

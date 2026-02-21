@@ -22,6 +22,9 @@ class AppImage {
 
   static const String logo = "assets/logo/logo.svg";
 
+  // profile
+  static const String defaultProfile = "assets/logo/profile.png";
+
   // animations
 
   static const String verifyEmail = "assets/animations/verify_email.json";
@@ -31,6 +34,22 @@ class AppImage {
   static const String arrowBack = "assets/icon/svg/arrow_back.svg";
   static const String arrowBackWhite = "assets/icon/svg/arrow_back_white.svg";
   static const String crossWhite = "assets/icon/svg/cross_white.svg";
+  static const String threeDot = "assets/icon/svg/three_dot.svg";
+  static const String address = "assets/icon/svg/address.svg";
+  static const String cartBlue = "assets/icon/svg/cart_blue.svg";
+  static const String person = "assets/icon/svg/person.svg";
+  static const String heartPerpal = "assets/icon/svg/heart_perpal.svg";
+  static const String bellYellow = "assets/icon/svg/bell_yellow.svg";
+  static const String paymentBlue = "assets/icon/svg/payment_blue.svg";
+  static const String questionOrange = "assets/icon/svg/question_orange.svg";
+  static const String userReview = "assets/icon/svg/user_review.svg";
+  static const String settingsPerpal = "assets/icon/svg/settings_perpal.svg";
+  static const String logoutRed = "assets/icon/svg/logout_red.svg";
+  static const String emailBlue = "assets/icon/svg/email_perpal.svg";
+  static const String phoneBlue = "assets/icon/svg/phone_blue.svg";
+  static const String arrowForward = "assets/icon/svg/arrow_forward.svg";
+  static const String arrowForwardGrey = "assets/icon/svg/arrow_forward_grey.svg";
+  
 
   /// products
 

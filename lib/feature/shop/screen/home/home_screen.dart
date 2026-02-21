@@ -5,6 +5,7 @@ import 'package:fast_food/common/widgets/shop/custom_offer_alert_dailog.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/all_categories_section.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/home_upper_section.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/open_restaurents_section.dart';
+import 'package:fast_food/feature/shop/screen/profile/profile_screen.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -26,7 +27,7 @@ class HomeScreen extends StatelessWidget {
       appBar: CustomAppBar(
         leading: AppCircularIconButton(
           icon: SvgPicture.asset("assets/icon/svg/menu.svg"),
-          onPressed: () {},
+          onPressed: () => Get.to(()=> ProfileScreen()),
         ),
         title: AppBarTitle(),
         actions: [AppCartButton()],
