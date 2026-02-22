@@ -24,6 +24,8 @@ class AppText {
   static const String skip = "Skip";
   static const String appContinue = "Continue";
   static const String getStarted = "Get Started";
+  static const String saveCapital = "SAVE";
+
 
   //                 ---------[Authentication Screen]---------
 
@@ -124,5 +126,17 @@ class AppText {
   static const String fullNameCapital = "FULL NAME";
   static const String emailCapital = "EMAIL";
   static const String phoneNumberCapitla = "PHONE NUMBER";
+
+  // edit profile
+
+  static const String editProfile= "Edit Profile";
+  static const String bioCapital= "BIO";
+
+  // Address screen
+  static const String myAddress= "My Address";
+  static const String homeCapital= "HOME";
+  static const String workCapital= "WORK";
+
+
 
 }

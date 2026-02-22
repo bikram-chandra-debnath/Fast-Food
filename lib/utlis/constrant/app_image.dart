@@ -49,6 +49,7 @@ class AppImage {
   static const String phoneBlue = "assets/icon/svg/phone_blue.svg";
   static const String arrowForward = "assets/icon/svg/arrow_forward.svg";
   static const String arrowForwardGrey = "assets/icon/svg/arrow_forward_grey.svg";
+  static const String editWhite = "assets/icon/svg/edit.svg";
   
 
   /// products
