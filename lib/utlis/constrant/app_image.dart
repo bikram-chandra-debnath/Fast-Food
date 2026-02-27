@@ -50,6 +50,10 @@ class AppImage {
   static const String arrowForward = "assets/icon/svg/arrow_forward.svg";
   static const String arrowForwardGrey = "assets/icon/svg/arrow_forward_grey.svg";
   static const String editWhite = "assets/icon/svg/edit.svg";
+  static const String workPerpal = "assets/icon/svg/work_perpal.svg";
+  static const String homeBlue = "assets/icon/svg/home_blue.svg";
+  static const String editOrange = "assets/icon/svg/edit_orange.svg";
+  static const String deleteOrange = "assets/icon/svg/delete_orange.svg";
   
 
   /// products

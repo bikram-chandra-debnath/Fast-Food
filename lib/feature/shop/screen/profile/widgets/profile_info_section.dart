@@ -1,5 +1,6 @@
 import 'package:fast_food/common/shape/rounded_container.dart';
 import 'package:fast_food/common/widgets/profile/custom_list_tile.dart';
+import 'package:fast_food/feature/shop/screen/profile/address/address_screen.dart';
 import 'package:fast_food/feature/shop/screen/profile/widgets/personal_info_screen.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
@@ -22,7 +23,7 @@ class ProfileInfoSection extends StatelessWidget {
           AppCustomListTile(
             title: AppText.address,
             leadingIcon: AppImage.address,
-            ontap: () {},
+            ontap: () => Get.to(() => AddressScreen()),
           ),
         ],
       ),
