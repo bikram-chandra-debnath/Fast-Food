@@ -1,8 +1,6 @@
-
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
-import 'package:fast_food/utlis/constrant/app_colors.dart';
+import 'package:fast_food/common/widgets/profile/icon_container.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
-import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -26,16 +24,8 @@ class AppCustomListTile extends StatelessWidget {
     return GestureDetector(
       onTap: ontap,
       child: ListTile(
-        leading: Container(
-          padding: EdgeInsets.all(AppSizes.sm * 1.5),
-          height: 40,
-          width: 40,
-          decoration: BoxDecoration(
-            color: AppColors.white,
-            shape: BoxShape.circle,
-          ),
-          child: SvgPicture.asset(leadingIcon),
-        ),
+        leading: AppCircularIconContainer(icon: leadingIcon),
+
 
         title: Text(
           title,
