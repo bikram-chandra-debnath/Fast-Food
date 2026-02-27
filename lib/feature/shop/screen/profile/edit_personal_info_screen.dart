@@ -2,8 +2,8 @@
 import 'package:fast_food/appbar/custom_appbar.dart';
 import 'package:fast_food/common/buttons/app_elevated_button.dart';
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
+import 'package:fast_food/common/widgets/app_input_filed.dart';
 import 'package:fast_food/common/widgets/profile/user_profile_picture.dart';
-import 'package:fast_food/feature/shop/screen/profile/widgets/edit_profile_inputfileld.dart';
 import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
@@ -67,25 +67,25 @@ class EditPersonalInfoScreen extends StatelessWidget {
               Column(
                 children: [
                   // Full Name
-                  EditProfileInputField(
+                  AppInputField(
                     controller: name,
                     title: AppText.fullNameCapital,
                   ),
                   SizedBox(height: AppSizes.spaceBtwInputFields),
                   // Email
-                  EditProfileInputField(
+                  AppInputField(
                     controller: email,
                     title: AppText.emailCapital,
                   ),
                   SizedBox(height: AppSizes.spaceBtwInputFields),
                   // phone Number
-                  EditProfileInputField(
+                  AppInputField(
                     controller: phoneNumber,
                     title: AppText.phoneNumberCapitla,
                   ),
                   SizedBox(height: AppSizes.spaceBtwInputFields),
                   // Bio
-                  EditProfileInputField(
+                  AppInputField(
                     controller: bio,
                     title: AppText.bioCapital,
                     maxLines: 3,

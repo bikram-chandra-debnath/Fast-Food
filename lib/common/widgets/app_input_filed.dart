@@ -1,6 +1,5 @@
-import 'package:fast_food/utlis/constrant/app_colors.dart';
+import 'package:fast_food/common/shape/rounded_container.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
-import 'package:fast_food/utlis/helper/app_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -8,55 +7,63 @@ class AppInputField extends StatelessWidget {
   const AppInputField({
     super.key,
     required this.title,
-    required this.hintText,
+     this.hintText,
     this.obscureText = false,
     this.ispassword = false,
-    required this.prefixIcon,
+    this.maxLines=1,
+    this.minLines=1,
+    this.controller,
   });
 
-  final String title, hintText;
+  final String title;
+  final String? hintText;
   final bool obscureText;
   final bool ispassword;
-  final Icon prefixIcon;
-
+  final int maxLines, minLines;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
-    
-  final dark = AppHelper.isDarkMode(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // password
-        Text(title, style: Theme.of(context).textTheme.titleLarge),
-        SizedBox(height: AppSizes.spaceBtwInputFields / 2),
+        Text(title, style: Theme.of(context).textTheme.titleMedium),
+        SizedBox(height: AppSizes.spaceBtwInputFields / 4),
 
         // input password
-        TextFormField(
-          obscureText: obscureText,
-          
-
-          decoration: InputDecoration(
-            fillColor: dark == true? AppColors.dark: AppColors.grey,
-            filled: true,
-            hintText: hintText,
-            hintStyle: Theme.of(context).textTheme.bodySmall,
-            prefixIcon: prefixIcon,
-            
-            
-
-            suffixIcon:
-                ispassword == true
-                    ? IconButton(
-                      style: IconButton.styleFrom(
-                        padding: EdgeInsets.all(0),
-                      ),
-                      onPressed: () {},
-                      icon: Icon(
-                        obscureText == true ? Iconsax.eye : Iconsax.eye_slash,
-                      ),
-                    )
-                    :null,
+        AppCustomRoundedContainer(
+          borderRadius: AppSizes.sm,
+          padding: EdgeInsets.zero,
+          child: TextField(
+            controller: controller,
+            obscureText: obscureText,
+            decoration: InputDecoration(
+              fillColor: Colors.transparent,
+              filled: true,
+              hintText:hintText ,
+              hintStyle: Theme.of(context).textTheme.bodySmall,
+              suffixIcon:
+                  ispassword == true
+                      ? IconButton(
+                        style: IconButton.styleFrom(padding: EdgeInsets.all(0)),
+                        onPressed: () {},
+                        icon: Icon(
+                          obscureText == true ? Iconsax.eye : Iconsax.eye_slash,
+                        ),
+                      )
+                      : null,
+              border: OutlineInputBorder(borderSide: BorderSide.none),
+              enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
+              disabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
+              errorBorder: OutlineInputBorder(borderSide: BorderSide.none),
+              focusedBorder: OutlineInputBorder(borderSide: BorderSide.none),
+              focusedErrorBorder: OutlineInputBorder(
+                borderSide: BorderSide.none,
+              ),
+            ),
+            maxLines: maxLines,
+            minLines: minLines,
           ),
         ),
       ],

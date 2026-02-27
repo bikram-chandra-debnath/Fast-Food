@@ -6,7 +6,6 @@ import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 
 class LoginBody extends StatelessWidget {
   const LoginBody({super.key});
@@ -20,7 +19,6 @@ class LoginBody extends StatelessWidget {
         AppInputField(
           title: AppText.email,
           hintText: AppText.enterEmail,
-          prefixIcon: Icon(Iconsax.direct_right),
         ),
         SizedBox(height: AppSizes.spaceBtwInputFields),
         // password
@@ -28,7 +26,6 @@ class LoginBody extends StatelessWidget {
           obscureText: true,
           title: AppText.password,
           hintText: AppText.enterPassword,
-          prefixIcon: Icon(Iconsax.password_check),
           ispassword: true,
         ),
 

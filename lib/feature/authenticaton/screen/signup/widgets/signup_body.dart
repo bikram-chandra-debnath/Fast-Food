@@ -5,7 +5,6 @@ import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 
 
 class SignupBody extends StatelessWidget {
@@ -21,7 +20,6 @@ class SignupBody extends StatelessWidget {
               child: AppInputField(
                 title: AppText.firstName,
                 hintText: AppText.enterFirstName,
-                prefixIcon: Icon(Iconsax.user),
               ),
             ),
             SizedBox(width: AppSizes.spaceBtwInputFields,),
@@ -29,9 +27,7 @@ class SignupBody extends StatelessWidget {
               child: AppInputField(
                 title: AppText.lastName,
                 hintText: AppText.enterLastName,
-                prefixIcon: Icon(Iconsax.user),
-              ),
-            ),
+            ),)
 
           ],
         ),
@@ -39,13 +35,11 @@ class SignupBody extends StatelessWidget {
         AppInputField(
           title: AppText.phoneNumber,
           hintText: AppText.enterPhoneNumber,
-          prefixIcon: Icon(Iconsax.call),
         ),
         SizedBox(height: AppSizes.spaceBtwInputFields),
         AppInputField(
           title: AppText.email,
           hintText: AppText.enterEmail,
-          prefixIcon: Icon(Iconsax.direct_right),
         ),
         SizedBox(height: AppSizes.spaceBtwInputFields),
         AppInputField(
@@ -53,7 +47,6 @@ class SignupBody extends StatelessWidget {
           obscureText: true,
           title: AppText.password,
           hintText: AppText.enterPassword,
-          prefixIcon: Icon(Iconsax.password_check),
         ),
         SizedBox(height: AppSizes.spaceBtwInputFields),
         AppInputField(
@@ -61,7 +54,6 @@ class SignupBody extends StatelessWidget {
           obscureText: true,
           title: AppText.confirmPassword,
           hintText: AppText.reTypePassword,
-          prefixIcon: Icon(Iconsax.password_check),
         ),
         SizedBox(height: AppSizes.spaceBtwSections),
 

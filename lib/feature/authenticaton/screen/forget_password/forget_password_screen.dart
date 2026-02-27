@@ -5,8 +5,6 @@ import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-
 import '../../../../common/widgets/login&signup/authentication_header_container.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
@@ -35,7 +33,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                 AppInputField(
                   title: AppText.email,
                   hintText: AppText.enterEmail,
-                  prefixIcon: Icon(Iconsax.direct_right),
+                 
                 ),
                 SizedBox(height: AppSizes.spaceBtwItems),
                 AppElevatedButton(
