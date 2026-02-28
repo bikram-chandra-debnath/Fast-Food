@@ -1,8 +1,8 @@
 import 'package:fast_food/appbar/custom_appbar.dart';
 import 'package:fast_food/common/buttons/app_elevated_button.dart';
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
-import 'package:fast_food/feature/shop/screen/profile/address/new_address_screen.dart';
-import 'package:fast_food/feature/shop/screen/profile/address/widgets/address_tile.dart';
+import 'package:fast_food/feature/shop/screen/address/new_address_screen.dart';
+import 'package:fast_food/feature/shop/screen/address/widgets/address_tile.dart';
 import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';

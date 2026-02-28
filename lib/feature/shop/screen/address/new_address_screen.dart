@@ -1,6 +1,6 @@
 import 'package:fast_food/common/buttons/app_elevated_button.dart';
-import 'package:fast_food/feature/shop/screen/profile/address/widgets/address_form.dart';
-import 'package:fast_food/feature/shop/screen/profile/address/widgets/show_map.dart';
+import 'package:fast_food/feature/shop/screen/address/widgets/address_form.dart';
+import 'package:fast_food/feature/shop/screen/address/widgets/show_map.dart';
 import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
