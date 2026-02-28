@@ -12,7 +12,7 @@ class AppInputField extends StatelessWidget {
     this.ispassword = false,
     this.maxLines=1,
     this.minLines=1,
-    this.controller,
+    this.controller, this.prefixIcon,
   });
 
   final String title;
@@ -21,6 +21,7 @@ class AppInputField extends StatelessWidget {
   final bool ispassword;
   final int maxLines, minLines;
   final TextEditingController? controller;
+  final Widget? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +40,7 @@ class AppInputField extends StatelessWidget {
             controller: controller,
             obscureText: obscureText,
             decoration: InputDecoration(
+              prefixIcon: prefixIcon,
               fillColor: Colors.transparent,
               filled: true,
               hintText:hintText ,
