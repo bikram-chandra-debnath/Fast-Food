@@ -19,7 +19,7 @@ class RecentKeywordSection extends StatelessWidget {
           height: 45,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) => KeywordCard(keyWord: "Burger"),
+            itemBuilder: (context, index) => AppRoundedButton(keyWord: "Burger", onPressed: () {  },),
             separatorBuilder:
                 (context, index) => SizedBox(width: AppSizes.spaceBtwItems),
             itemCount: 5,
