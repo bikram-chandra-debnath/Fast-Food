@@ -54,6 +54,7 @@ class AppImage {
   static const String homeBlue = "assets/icon/svg/home_blue.svg";
   static const String editOrange = "assets/icon/svg/edit_orange.svg";
   static const String deleteOrange = "assets/icon/svg/delete_orange.svg";
+  static const String location = "assets/icon/svg/location.svg";
   
 
   /// products

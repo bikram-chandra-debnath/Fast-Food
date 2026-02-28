@@ -1,6 +1,7 @@
 import 'package:fast_food/appbar/custom_appbar.dart';
 import 'package:fast_food/common/buttons/app_elevated_button.dart';
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
+import 'package:fast_food/feature/shop/screen/profile/address/new_address_screen.dart';
 import 'package:fast_food/feature/shop/screen/profile/address/widgets/address_tile.dart';
 import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
@@ -62,7 +63,7 @@ class AddressScreen extends StatelessWidget {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(AppSizes.defaultSpace),
         child: AppElevatedButton(
-          onPressed: () {},
+          onPressed: () => Get.to(() => NewAddressScreen()),
           child: Text(
             AppText.addNewAddress,
             style: Theme.of(

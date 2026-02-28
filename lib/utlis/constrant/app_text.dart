@@ -142,6 +142,7 @@ class AppText {
   static const String postCodeCapital= "POST CODE";
   static const String appartmentCapital= "APPARTMENT";
   static const String labelAs= "LABEL AS";
+  static const String saveLocation= "SAVE LOCATION";
 
 
 
