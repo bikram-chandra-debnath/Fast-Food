@@ -1,9 +1,11 @@
 
 import 'package:fast_food/common/shape/rounded_container.dart';
 import 'package:fast_food/common/widgets/profile/custom_list_tile.dart';
+import 'package:fast_food/feature/authenticaton/screen/login/login_screen.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LogoutSection extends StatelessWidget {
   const LogoutSection({
@@ -16,7 +18,7 @@ class LogoutSection extends StatelessWidget {
       child: AppCustomListTile(
         title: AppText.logout,
         leadingIcon: AppImage.logoutRed,
-        ontap: () {},
+        ontap: () => Get.offAll(()=> LoginScreen()),
       ),
     );
   }
