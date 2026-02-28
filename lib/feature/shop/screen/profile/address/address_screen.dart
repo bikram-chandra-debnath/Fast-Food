@@ -1,6 +1,8 @@
 import 'package:fast_food/appbar/custom_appbar.dart';
+import 'package:fast_food/common/buttons/app_elevated_button.dart';
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
 import 'package:fast_food/feature/shop/screen/profile/address/widgets/address_tile.dart';
+import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
@@ -54,6 +56,18 @@ class AddressScreen extends StatelessWidget {
                 address: "3891 Ranchview Dr. Richardson, California 62639",
               ),
             ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(AppSizes.defaultSpace),
+        child: AppElevatedButton(
+          onPressed: () {},
+          child: Text(
+            AppText.addNewAddress,
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(color: AppColors.textWhite),
           ),
         ),
       ),

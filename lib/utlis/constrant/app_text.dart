@@ -134,8 +134,14 @@ class AppText {
 
   // Address screen
   static const String myAddress= "My Address";
+  static const String addressCapital= "ADDRESS";
   static const String homeCapital= "HOME";
   static const String workCapital= "WORK";
+  static const String addNewAddress= "ADD NEW ADDRESS";
+  static const String streetCapital= "STREET";
+  static const String postCodeCapital= "POST CODE";
+  static const String appartmentCapital= "APPARTMENT";
+  static const String labelAs= "LABEL AS";
 
 
 
