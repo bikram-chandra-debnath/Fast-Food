@@ -29,7 +29,7 @@ class AppInputField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // password
-        Text(title, style: Theme.of(context).textTheme.titleMedium),
+        Text(title, style: Theme.of(context).textTheme.titleSmall),
         SizedBox(height: AppSizes.spaceBtwInputFields / 4),
 
         // input password
