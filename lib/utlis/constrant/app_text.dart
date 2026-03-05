@@ -144,6 +144,25 @@ class AppText {
   static const String labelAs= "LABEL AS";
   static const String saveLocation= "SAVE LOCATION";
 
+  // Resturant view screen 
+
+  static const String restaurantView = "Restaurant View";
+  static const String filterYourSearch = "Filter your search";
+  static const String offersCapital = "OFFERS";
+  static const String offer = "Offer";
+  static const String delivery = "Delivery";
+  static const String pickUp = "Pick Up";
+  static const String onlinePaymentAvailable = "Online payment available";
+  static const String deliveryTimeCapital = "DELIVERY TIME";
+  static const String pricingCapital = " PRICING";
+  static const String ratingCapital = " RATING";
+  static const String filterCapital = " FILTER";
+
+
+
+
+  
+
 
 
 }

@@ -1,9 +1,10 @@
-
 import 'package:fast_food/common/widgets/shop/section_heading.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/restaurent_view_card.dart';
+import 'package:fast_food/feature/shop/screen/resturant/resturant_view_screen.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class OpenRestaurantSection extends StatelessWidget {
   const OpenRestaurantSection({super.key});
@@ -16,13 +17,15 @@ class OpenRestaurantSection extends StatelessWidget {
         children: [
           AppSectionHeading(title: AppText.openRestaurants, onPressed: () {}),
           SizedBox(height: AppSizes.spaceBtwItems / 2),
-          SizedBox( 
-            height:240*5,
+          SizedBox(
+            height: 240 * 5,
             child: ListView.separated(
               scrollDirection: Axis.vertical,
               physics: NeverScrollableScrollPhysics(),
               itemBuilder:
-                  (BuildContext context, int index) => RestaurentViewCard(),
+                  (BuildContext context, int index) => RestaurentViewCard(
+                    onPressed: () => Get.to(() => RestaurentViewScreen()),
+                  ),
               separatorBuilder:
                   (BuildContext context, int index) =>
                       SizedBox(height: AppSizes.spaceBtwItems),
@@ -34,3 +37,4 @@ class OpenRestaurantSection extends StatelessWidget {
     );
   }
 }
+

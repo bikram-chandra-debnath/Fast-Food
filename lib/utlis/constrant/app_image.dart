@@ -55,6 +55,10 @@ class AppImage {
   static const String editOrange = "assets/icon/svg/edit_orange.svg";
   static const String deleteOrange = "assets/icon/svg/delete_orange.svg";
   static const String location = "assets/icon/svg/location.svg";
+  static const String crossOrange = "assets/icon/svg/cross.svg";
+  static const String crossGrey = "assets/icon/svg/cross_grey.svg";
+  static const String star = "assets/icon/svg/star.svg";
+  static const String starFilled = "assets/icon/svg/star_filled.svg";
   
 
   /// products
