@@ -13,7 +13,7 @@ class AppCircularIconButton extends StatelessWidget {
     this.height = 45,
     this.tapTargetSize,
     this.padding,
-    this.minimumSize,
+    this.minimumSize,  this.showBorder=false,
   });
 
   final Widget icon;
@@ -24,6 +24,7 @@ class AppCircularIconButton extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final Size? minimumSize;
   final MaterialTapTargetSize? tapTargetSize;
+  final bool showBorder;
   @override
   Widget build(BuildContext context) {
     return IconButton(
@@ -35,6 +36,7 @@ class AppCircularIconButton extends StatelessWidget {
         fixedSize: Size(width, height),
         foregroundColor: color,
         tapTargetSize: tapTargetSize,
+       side: BorderSide(width:showBorder? 1.5:0, color:showBorder?  AppColors.grey:Colors.transparent)
       ),
       onPressed: onPressed,
       icon: icon,
