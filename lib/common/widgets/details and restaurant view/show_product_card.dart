@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-class ShowProductCard extends StatelessWidget {
+class ShowProductCard extends GetView {
   const ShowProductCard({
     super.key,
     this.onPressed,
@@ -43,19 +43,17 @@ class ShowProductCard extends StatelessWidget {
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 height: 30,
                 width: 30,
-                icon: Icon(Iconsax.add),
+                icon: const Icon(Iconsax.add),
                 color: AppColors.textWhite,
                 backgroundColor: AppColors.primary,
                 onPressed: () {
                   Get.snackbar(
-                    "",
-                    "Product Added to Cart",
-                    titleText: Text(
-                      "Successfull",
-                      style: Theme.of(context).textTheme.headlineSmall
-                          ?.copyWith(color: AppColors.buttonDone),
-                    ),
-                  );
+              "Successful",
+              "Product Added to Cart",
+              snackPosition: SnackPosition.BOTTOM,
+              backgroundColor: AppColors.primary,
+              colorText: AppColors.textWhite,
+            );
                 },
               ),
             ],

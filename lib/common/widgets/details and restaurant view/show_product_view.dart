@@ -35,7 +35,7 @@ class ShowProductView extends StatelessWidget {
           physics: NeverScrollableScrollPhysics(),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.84,
+            childAspectRatio: 0.72,
             crossAxisSpacing: AppSizes.spaceBtwItems,
           ),
           shrinkWrap: true,
