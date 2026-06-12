@@ -15,9 +15,11 @@ class AppCustomRoundedContainer extends StatelessWidget {
     this.height,
     this.width,
     this.backgroundColor = AppColors.containerBackground,
+    this.margin,
   });
 
   final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? margin;
   final double borderRadius;
   final Widget? child;
   final double? height, width;
@@ -26,6 +28,7 @@ class AppCustomRoundedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: margin,
       height: height,
       width: width,
       padding: padding,
