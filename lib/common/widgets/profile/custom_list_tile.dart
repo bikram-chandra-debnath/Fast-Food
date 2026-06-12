@@ -38,8 +38,6 @@ class AppCustomListTile extends StatelessWidget {
             isTrailing
                 ? AppCircularIconButton(
                   padding: EdgeInsets.zero,
-                  minimumSize: Size.zero,
-                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   icon: SvgPicture.asset(AppImage.arrowForwardGrey),
                 )
                 : SizedBox(),

@@ -2,7 +2,6 @@ import 'package:fast_food/common/buttons/circular_Icon_button.dart';
 import 'package:fast_food/common/widgets/shop/product_card.dart';
 import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
-import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -28,36 +27,26 @@ class ShowProductCard extends GetView {
         image: AppImage.burger,
         title: productName,
         description: restaurantName,
-        child: Padding(
-          padding: const EdgeInsets.only(right: AppSizes.defaultSpace / 1.5),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              // Product Price
-              Text("\$$price", style: Theme.of(context).textTheme.titleLarge),
-
-              // Add to cart button
-              AppCircularIconButton(
-                minimumSize: Size.zero,
-                padding: EdgeInsets.zero,
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                height: 30,
-                width: 30,
-                icon: const Icon(Iconsax.add),
-                color: AppColors.textWhite,
-                backgroundColor: AppColors.primary,
-                onPressed: () {
-                  Get.snackbar(
-              "Successful",
-              "Product Added to Cart",
-              snackPosition: SnackPosition.BOTTOM,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          
+          children: [
+            // Product Price
+            Text("\$$price", style: Theme.of(context).textTheme.titleLarge),
+            
+        
+            // Add to cart button
+            AppCircularIconButton(
+              padding: EdgeInsets.zero,
+              height: 30,
+              width: 30,
+              icon: const Icon(Iconsax.add, color: AppColors.textWhite),
               backgroundColor: AppColors.primary,
-              colorText: AppColors.textWhite,
-            );
-                },
-              ),
-            ],
-          ),
+              onPressed: () {
+                debugPrint("Cart Added");
+              },
+            ),
+          ],
         ),
       ),
     );

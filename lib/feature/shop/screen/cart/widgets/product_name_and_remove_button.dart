@@ -38,7 +38,6 @@ class CartProductNameAndRemove extends StatelessWidget {
                     width: 25,
                     child: AppCircularIconButton(
                       padding: EdgeInsets.zero,
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       icon: SvgPicture.asset(AppImage.crossWhite),
                       onPressed: () {},
                       backgroundColor: AppColors.buttonCancle,

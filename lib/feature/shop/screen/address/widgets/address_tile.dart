@@ -48,10 +48,8 @@ class AddressTile extends StatelessWidget {
                           AppCircularIconButton(
                             icon: SvgPicture.asset(AppImage.editOrange),
                             padding: EdgeInsets.zero,
-                            minimumSize: Size.zero,
                             height: 25,
                             width: 25,
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             onPressed: () {},
                           ),
                           SizedBox(width: AppSizes.spaceBtwItems / 2),
@@ -59,10 +57,8 @@ class AddressTile extends StatelessWidget {
                           AppCircularIconButton(
                             icon: SvgPicture.asset(AppImage.deleteOrange),
                             padding: EdgeInsets.zero,
-                            minimumSize: Size.zero,
                             height: 25,
                             width: 25,
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             onPressed: () {},
                           ),
                         ],

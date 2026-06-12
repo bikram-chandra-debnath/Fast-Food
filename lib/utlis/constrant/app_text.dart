@@ -158,6 +158,10 @@ class AppText {
   static const String ratingCapital = " RATING";
   static const String filterCapital = " FILTER";
 
+  // Details screen 
+
+  static const String details = "Details";
+
 
 
 

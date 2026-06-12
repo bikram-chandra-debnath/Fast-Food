@@ -1,6 +1,8 @@
 import 'package:fast_food/common/widgets/details%20and%20restaurant%20view/show_product_card.dart';
+import 'package:fast_food/feature/shop/screen/product_details/product_details_screen.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ShowProductView extends StatelessWidget {
   const ShowProductView({
@@ -41,6 +43,7 @@ class ShowProductView extends StatelessWidget {
           shrinkWrap: true,
           itemBuilder:
               (context, index) => ShowProductCard(
+                onPressed: () => Get.to(()=> ProductDetailsScreen()),
                 productName: productName,
                 restaurantName: restaurantName,
                 price: price,
@@ -50,3 +53,6 @@ class ShowProductView extends StatelessWidget {
     );
   }
 }
+
+
+
