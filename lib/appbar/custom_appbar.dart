@@ -8,11 +8,12 @@ import '../utlis/constrant/app_size.dart';
 import '../utlis/constrant/app_text.dart';
 import '../utlis/helper/device_helper.dart';
 
-
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
-    this.title, this.actions, this.leading,
+    this.title,
+    this.actions,
+    this.leading,
     this.backgroundColor = Colors.transparent,
   });
 
@@ -20,7 +21,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget>? actions;
   final Widget? leading;
   final Color backgroundColor;
-
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         actions: actions,
         centerTitle: false,
         elevation: 0,
-        backgroundColor: backgroundColor
+        backgroundColor: backgroundColor,
       ),
     );
   }
@@ -47,44 +47,46 @@ class AppCartButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 60,
-      width: 60,
+    return Stack(
+      children: [
+        SizedBox(height: 50, width: 50),
+        Positioned(
+          top: 3,
+          left: 3,
+          right: 3,
+          bottom: 3,
+          child: AppCircularIconButton(
+            height: 40,
+            width: 40,
+            icon: SvgPicture.asset("assets/icon/svg/cart.svg"),
+            backgroundColor: AppColors.black,
+            color: AppColors.white,
+            onPressed: () => Get.to(() => CartScreen()),
+          ),
+        ),
 
-      child: Center(
-        child: Stack(
-          children: [
-            AppCircularIconButton(
-              icon: SvgPicture.asset("assets/icon/svg/cart.svg"),
-              backgroundColor: AppColors.black,
-              color: AppColors.white,
-              onPressed: ()  => Get.to (()=> CartScreen())
+        Positioned(
+          top: 0,
+          right: 0,
+          child: Container(
+            height: 25,
+            width: 25,
+
+            decoration: BoxDecoration(
+              color: AppColors.primary,
+              shape: BoxShape.circle,
             ),
-
-            Positioned(
-              top: 0,
-              right: 0,
-              child: Container(
-                height: 25,
-                width: 25,
-
-                decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  shape: BoxShape.circle,
-                ),
-                child: Center(
-                  child: Text(
-                    "2",
-                    style: Theme.of(
-                      context,
-                    ).textTheme.titleMedium!.apply(color: AppColors.white),
-                  ),
-                ),
+            child: Center(
+              child: Text(
+                "2",
+                style: Theme.of(
+                  context,
+                ).textTheme.titleMedium!.apply(color: AppColors.white),
               ),
             ),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }
