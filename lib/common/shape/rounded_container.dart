@@ -16,6 +16,7 @@ class AppCustomRoundedContainer extends StatelessWidget {
     this.width,
     this.backgroundColor = AppColors.containerBackground,
     this.margin,
+    this.border,
   });
 
   final EdgeInsetsGeometry padding;
@@ -24,6 +25,7 @@ class AppCustomRoundedContainer extends StatelessWidget {
   final Widget? child;
   final double? height, width;
   final Color backgroundColor;
+  final BoxBorder? border;
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +37,7 @@ class AppCustomRoundedContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
+        border: border,
       ),
       child: child,
     );

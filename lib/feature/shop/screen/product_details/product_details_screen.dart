@@ -9,6 +9,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../utlis/constrant/app_colors.dart';
+
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
 
@@ -30,6 +32,7 @@ class ProductDetailsScreen extends StatelessWidget {
           horizontal: AppSizes.defaultSpace,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
               children: [
@@ -40,8 +43,8 @@ class ProductDetailsScreen extends StatelessWidget {
                   padding: EdgeInsetsGeometry.zero,
                   child: ClipRRect(
                     borderRadius: BorderRadiusGeometry.all(Radius.circular(20)),
-                    child: Image.asset(
-                      "assets/restaurants/image.jpg",
+                    child: Image.network(
+                      "https://t4.ftcdn.net/jpg/02/74/99/01/240_F_274990113_ffVRBygLkLCZAATF9lWymzE6bItMVuH1.jpg",
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -50,16 +53,21 @@ class ProductDetailsScreen extends StatelessWidget {
                 Positioned(
                   bottom: 10,
                   right: 10,
-                  child:
-                  //  IconButton(
-                  //   style: IconButton.styleFrom(
-                  //     backgroundColor: Colors.amber
-                  //   ),
-                  //   onPressed: (){}, icon: Icon(Iconsax.heart))
-
-                  AppCircularIconButton(icon: Icon(Iconsax.heart, color: Colors.white,),backgroundColor: Colors.amber,)
+                  child: AppCircularIconButton(
+                    icon: Icon(Iconsax.heart, color: Colors.white),
+                    backgroundColor: AppColors.darkGrey.withValues(alpha: 0.4),
+                  ),
                 ),
               ],
+            ),
+
+            AppCustomRoundedContainer(
+              
+              backgroundColor: Colors.transparent,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [Text("Uttora Coffe House")],
+              ),
             ),
           ],
         ),

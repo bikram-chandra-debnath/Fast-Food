@@ -26,7 +26,6 @@ class AppText {
   static const String getStarted = "Get Started";
   static const String saveCapital = "SAVE";
 
-
   //                 ---------[Authentication Screen]---------
 
   static const String email = "Email";
@@ -110,16 +109,16 @@ class AppText {
 
   // profile screen
 
-  static const String profile= "Profile";
-  static const String personInfo= "Personal Info";
-  static const String address= "Address";
-  static const String favorite= "Favorite";
-  static const String notifications= "Notifications";
-  static const String paymentMethod= "Payment Method";
-  static const String faqS= "FAQs";
-  static const String userReview= "User Review";
-  static const String settings= "Settings";
-  static const String logout= "Logout";
+  static const String profile = "Profile";
+  static const String personInfo = "Personal Info";
+  static const String address = "Address";
+  static const String favorite = "Favorite";
+  static const String notifications = "Notifications";
+  static const String paymentMethod = "Payment Method";
+  static const String faqS = "FAQs";
+  static const String userReview = "User Review";
+  static const String settings = "Settings";
+  static const String logout = "Logout";
 
   // personal info screen
 
@@ -129,22 +128,22 @@ class AppText {
 
   // edit profile
 
-  static const String editProfile= "Edit Profile";
-  static const String bioCapital= "BIO";
+  static const String editProfile = "Edit Profile";
+  static const String bioCapital = "BIO";
 
   // Address screen
-  static const String myAddress= "My Address";
-  static const String addressCapital= "ADDRESS";
-  static const String homeCapital= "HOME";
-  static const String workCapital= "WORK";
-  static const String addNewAddress= "ADD NEW ADDRESS";
-  static const String streetCapital= "STREET";
-  static const String postCodeCapital= "POST CODE";
-  static const String appartmentCapital= "APPARTMENT";
-  static const String labelAs= "LABEL AS";
-  static const String saveLocation= "SAVE LOCATION";
+  static const String myAddress = "My Address";
+  static const String addressCapital = "ADDRESS";
+  static const String homeCapital = "HOME";
+  static const String workCapital = "WORK";
+  static const String addNewAddress = "ADD NEW ADDRESS";
+  static const String streetCapital = "STREET";
+  static const String postCodeCapital = "POST CODE";
+  static const String appartmentCapital = "APPARTMENT";
+  static const String labelAs = "LABEL AS";
+  static const String saveLocation = "SAVE LOCATION";
 
-  // Resturant view screen 
+  // Resturant view screen
 
   static const String restaurantView = "Restaurant View";
   static const String filterYourSearch = "Filter your search";
@@ -158,15 +157,9 @@ class AppText {
   static const String ratingCapital = " RATING";
   static const String filterCapital = " FILTER";
 
-  // Details screen 
+  // Details screen
 
   static const String details = "Details";
-
-
-
-
-  
-
-
-
+  static const String size = "SIZE";
+  static const String ingrident = "INGRIDENT";
 }
