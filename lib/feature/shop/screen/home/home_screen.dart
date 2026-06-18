@@ -1,7 +1,5 @@
-import 'dart:async';
 
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
-import 'package:fast_food/common/widgets/shop/custom_offer_alert_dailog.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/all_categories_section.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/home_upper_section.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/open_restaurents_section.dart';
@@ -18,11 +16,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(
-      Duration(seconds: 2),
-      () => Get.dialog( 
-        barrierDismissible: false, CustomOfferAlertDailog()),
-    );
+    // Timer(
+    //   Duration(seconds: 2),
+    //   () => Get.dialog( 
+    //     barrierDismissible: false, CustomOfferAlertDailog()),
+    // );
     return Scaffold(
       appBar: CustomAppBar(
         leading: AppCircularIconButton(

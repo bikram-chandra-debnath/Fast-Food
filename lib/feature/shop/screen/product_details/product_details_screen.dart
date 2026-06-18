@@ -1,15 +1,18 @@
 import 'package:fast_food/appbar/custom_appbar.dart';
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
-import 'package:fast_food/common/shape/rounded_container.dart';
+import 'package:fast_food/common/widgets/shop/rating_and_delivery_time.dart';
+import 'package:fast_food/feature/shop/screen/product_details/widgets/image_and_favorite.dart' show ImageAndFavorite;
+import 'package:fast_food/feature/shop/screen/product_details/widgets/ingradent.dart';
+import 'package:fast_food/feature/shop/screen/product_details/widgets/name_and_description.dart';
+import 'package:fast_food/feature/shop/screen/product_details/widgets/restaurant_name.dart';
+import 'package:fast_food/feature/shop/screen/product_details/widgets/size.dart';
+import 'package:fast_food/feature/shop/screen/product_details/widgets/total_price_and_cart.dart';
 import 'package:fast_food/utlis/constrant/app_image.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-
-import '../../../../utlis/constrant/app_colors.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
@@ -31,47 +34,35 @@ class ProductDetailsScreen extends StatelessWidget {
         padding: EdgeInsetsGeometry.symmetric(
           horizontal: AppSizes.defaultSpace,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Stack(
-              children: [
-                AppCustomRoundedContainer(
-                  margin: EdgeInsets.only(top: AppSizes.defaultSpace * 1.5),
-                  height: 184,
-                  width: double.maxFinite,
-                  padding: EdgeInsetsGeometry.zero,
-                  child: ClipRRect(
-                    borderRadius: BorderRadiusGeometry.all(Radius.circular(20)),
-                    child: Image.network(
-                      "https://t4.ftcdn.net/jpg/02/74/99/01/240_F_274990113_ffVRBygLkLCZAATF9lWymzE6bItMVuH1.jpg",
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-
-                Positioned(
-                  bottom: 10,
-                  right: 10,
-                  child: AppCircularIconButton(
-                    icon: Icon(Iconsax.heart, color: Colors.white),
-                    backgroundColor: AppColors.darkGrey.withValues(alpha: 0.4),
-                  ),
-                ),
-              ],
-            ),
-
-            AppCustomRoundedContainer(
-              
-              backgroundColor: Colors.transparent,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [Text("Uttora Coffe House")],
-              ),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ImageAndFavorite(),
+              SizedBox(height: AppSizes.spaceBtwSections),
+              // restaurant name
+              RestaurantName(),
+              SizedBox(height: AppSizes.spaceBtwSections / 2),
+              NameAndDescription(),
+              SizedBox(height: AppSizes.spaceBtwItems),
+              // rating
+              RatingAndDeliveryTime(reating: "4.5", time: "20"),
+              SizedBox(height: AppSizes.spaceBtwItems),
+              // Size
+              Sizes(),
+              SizedBox(height: AppSizes.spaceBtwItems),
+              // Ingrident
+              Ingradents(),
+            ],
+          ),
         ),
       ),
+      bottomSheet: TotalPriceAndCart(),
     );
   }
 }
+
+
+
+
+

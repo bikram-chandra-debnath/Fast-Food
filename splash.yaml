@@ -1,5 +1,5 @@
 dev_dependencies:
-  flutter_native_splash: ^2.4.0
+  flutter_native_splash:
 
 flutter_native_splash:
   color: "#000000"  

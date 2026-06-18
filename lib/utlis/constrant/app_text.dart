@@ -160,6 +160,6 @@ class AppText {
   // Details screen
 
   static const String details = "Details";
-  static const String size = "SIZE";
+  static const String size = "SIZE:";
   static const String ingrident = "INGRIDENT";
 }

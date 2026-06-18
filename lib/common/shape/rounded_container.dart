@@ -17,6 +17,8 @@ class AppCustomRoundedContainer extends StatelessWidget {
     this.backgroundColor = AppColors.containerBackground,
     this.margin,
     this.border,
+    this.isCircular = false,
+    this.boxShadow,
   });
 
   final EdgeInsetsGeometry padding;
@@ -26,6 +28,8 @@ class AppCustomRoundedContainer extends StatelessWidget {
   final double? height, width;
   final Color backgroundColor;
   final BoxBorder? border;
+  final bool isCircular;
+  final List<BoxShadow>? boxShadow;
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +39,11 @@ class AppCustomRoundedContainer extends StatelessWidget {
       width: width,
       padding: padding,
       decoration: BoxDecoration(
+        boxShadow: boxShadow,
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(borderRadius),
+        borderRadius: isCircular ? null : BorderRadius.circular(borderRadius),
         border: border,
+        shape: isCircular ? BoxShape.circle : BoxShape.rectangle,
       ),
       child: child,
     );

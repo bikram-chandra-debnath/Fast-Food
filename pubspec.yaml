@@ -34,22 +34,22 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-  smooth_page_indicator: ^1.2.1
-  get: ^4.7.2
-  iconsax: ^0.0.8
-  lottie: ^3.3.1
-  flutter_svg: ^2.2.2
-  animate_do: ^4.2.0
-  google_fonts: ^6.3.2
-  verification_code_field: ^1.1.1
+  cupertino_icons: 
+  smooth_page_indicator:
+  get: 
+  iconsax: 
+  lottie: 
+  flutter_svg: 
+  animate_do: 
+  google_fonts: 
+  verification_code_field: 
 
-  get_storage: ^2.1.1
-  firebase_auth: ^6.1.4
-  firebase_core: ^4.4.0
-  flutter_native_splash: ^2.4.6
-  crystal_navigation_bar: ^1.0.4
-  see_more_text: ^1.1.1
+  get_storage: 
+  firebase_auth: 
+  firebase_core: 
+  flutter_native_splash:
+  crystal_navigation_bar: 
+  see_more_text: 
 
 
 dev_dependencies:
@@ -61,7 +61,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^5.0.0
+  flutter_lints: 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -84,6 +84,7 @@ flutter:
     - assets/shapes/
     - assets/logo/
     - assets/animations/
+    - assets/icon/svg/ingrident/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
