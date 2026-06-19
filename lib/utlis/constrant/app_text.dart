@@ -89,6 +89,7 @@ class AppText {
   static const String allCategories = "All Categories";
   static const String openRestaurants = "Open Restaurants";
   static const String seeAll = "See All";
+  static const String starting = "Starting";
 
   // search
 

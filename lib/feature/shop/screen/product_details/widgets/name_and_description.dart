@@ -1,4 +1,3 @@
-
 import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,7 @@ class NameAndDescription extends StatelessWidget {
       children: [
         // Product name
         Text(
-          "Pizza calzone european",
+          "Burger calzone european",
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         SizedBox(height: AppSizes.spaceBtwItems / 2),

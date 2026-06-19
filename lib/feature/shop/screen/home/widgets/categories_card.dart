@@ -1,6 +1,7 @@
 
 import 'package:fast_food/common/widgets/shop/product_card.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
+import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
 
 class AppCategoriesCard extends StatelessWidget {
@@ -21,7 +22,7 @@ class AppCategoriesCard extends StatelessWidget {
         ProductCard(image: image, title: title, child:  Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Starting ",
+                Text(AppText.starting,
                     style: Theme.of(context).textTheme.bodyMedium),
                 Text(price, style: Theme.of(context).textTheme.titleLarge),
               ],
