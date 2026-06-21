@@ -36,7 +36,7 @@ class TitleDescriptionRating extends StatelessWidget {
         SizedBox(height: AppSizes.spaceBtwItems),
 // Ratings and Delivery info
         RatingAndDeliveryTime(
-          reating: reating,
+          rating: reating,
           time: time,
           deliveryCharge: deliveryCharge,
         ),

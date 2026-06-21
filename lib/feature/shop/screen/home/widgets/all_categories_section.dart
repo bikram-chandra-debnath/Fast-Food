@@ -50,3 +50,5 @@ class AllCategoriesSection extends StatelessWidget {
     );
   }
 }
+
+

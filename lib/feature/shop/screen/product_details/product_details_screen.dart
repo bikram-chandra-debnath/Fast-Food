@@ -1,7 +1,8 @@
 import 'package:fast_food/appbar/custom_appbar.dart';
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
 import 'package:fast_food/common/widgets/shop/rating_and_delivery_time.dart';
-import 'package:fast_food/feature/shop/screen/product_details/widgets/image_and_favorite.dart' show ImageAndFavorite;
+import 'package:fast_food/feature/shop/screen/product_details/widgets/image_and_favorite.dart'
+    show ImageAndFavorite;
 import 'package:fast_food/feature/shop/screen/product_details/widgets/ingradent.dart';
 import 'package:fast_food/feature/shop/screen/product_details/widgets/name_and_description.dart';
 import 'package:fast_food/feature/shop/screen/product_details/widgets/restaurant_name.dart';
@@ -15,7 +16,25 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
-  const ProductDetailsScreen({super.key});
+  const ProductDetailsScreen({
+    super.key,
+    required this.restaurantName,
+    required this.productName,
+    required this.productDescription,
+    required this.rating,
+    required this.time,
+    required this.productPrice,
+    required this.productImage, required this.productSize,
+  });
+
+  final String restaurantName,
+      productName,
+      productDescription,
+      rating,
+      time,
+      productImage;
+  final int productPrice;
+  final List productSize;
 
   @override
   Widget build(BuildContext context) {
@@ -38,18 +57,21 @@ class ProductDetailsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ImageAndFavorite(),
+              ImageAndFavorite(productImage: productImage),
               SizedBox(height: AppSizes.spaceBtwSections),
               // restaurant name
-              RestaurantName(),
+              RestaurantName(restaurantName: restaurantName),
               SizedBox(height: AppSizes.spaceBtwSections / 2),
-              NameAndDescription(),
+              NameAndDescription(
+                productName: productName,
+                productDescription: productName,
+              ),
               SizedBox(height: AppSizes.spaceBtwItems),
               // rating
-              RatingAndDeliveryTime(reating: "4.5", time: "20"),
+              RatingAndDeliveryTime(rating: rating, time: time),
               SizedBox(height: AppSizes.spaceBtwItems),
               // Size
-              Sizes(),
+              Sizes(productSize: productSize),
               SizedBox(height: AppSizes.spaceBtwItems),
               // Ingrident
               Ingradents(),
@@ -57,12 +79,7 @@ class ProductDetailsScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomSheet: TotalPriceAndCart(),
+      bottomSheet: TotalPriceAndCart(productPrice: productPrice),
     );
   }
 }
-
-
-
-
-

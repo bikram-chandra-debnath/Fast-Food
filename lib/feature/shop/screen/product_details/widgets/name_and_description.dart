@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:see_more_text/see_more_text.dart';
 
 class NameAndDescription extends StatelessWidget {
-  const NameAndDescription({super.key});
+  const NameAndDescription({
+    super.key,
+    required this.productName,
+    required this.productDescription,
+  });
+  final String productName, productDescription;
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +17,11 @@ class NameAndDescription extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Product name
-        Text(
-          "Burger calzone european",
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
+        Text(productName, style: Theme.of(context).textTheme.headlineMedium),
         SizedBox(height: AppSizes.spaceBtwItems / 2),
         // product description
         SeeMoreText(
-          text:
-              "Prosciutto e funghi is a pizza variety that is topped with tomato sauce.",
+          text: productDescription,
           maxLines: 3,
           seeLessText: "see less",
           seeMoreText: "see more",

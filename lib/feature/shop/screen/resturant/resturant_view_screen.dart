@@ -14,7 +14,24 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class RestaurentViewScreen extends StatelessWidget {
-  const RestaurentViewScreen({super.key});
+  const RestaurentViewScreen({
+    super.key,
+    required this.menu,
+    required this.productList,
+    required this.restaurantImage,
+    required this.restaurantName,
+    required this.restaurantDescription,
+    required this.rating,
+    required this.time,
+  });
+  final List menu;
+  final List productList;
+
+  final String restaurantImage,
+      restaurantName,
+      restaurantDescription,
+      rating,
+      time;
 
   @override
   Widget build(BuildContext context) {
@@ -50,31 +67,24 @@ class RestaurentViewScreen extends StatelessWidget {
               SizedBox(height: AppSizes.spaceBtwSections),
 
               // Restaurant Image
-              AppDetailsImageBox(image: "assets/restaurants/image.jpg"),
+              AppDetailsImageBox(image: restaurantImage),
               SizedBox(height: AppSizes.spaceBtwSections),
               // Restaurant Details
               TitleDescriptionRating(
-                title: "Spicy restaurant",
-                description:
-                    "Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-                reating: '4.7',
-                time: '20',
+                title: restaurantName,
+                description: restaurantDescription,
+                reating: rating,
+                time: time,
               ),
               SizedBox(height: AppSizes.spaceBtwSections),
               //-------[Body]---------
 
               // Food Items
-              RestaurantItems(),
+              RestaurantItems(menu: menu),
               SizedBox(height: AppSizes.spaceBtwSections),
 
               // Product title and Products
-              ShowProductView(
-                title: "Burger(5)",
-                itemCount: 5,
-                productName: "Burger Ferguson",
-                restaurantName: "Spicy Restaurant",
-                price: "44",
-              ),
+              ShowProductView(productList: productList),
               SizedBox(height: AppSizes.spaceBtwSections),
             ],
           ),

@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 class Sizes extends StatelessWidget {
-  const Sizes({super.key});
-
+  const Sizes({super.key, required this.productSize});
+  final List productSize;
   @override
   Widget build(BuildContext context) {
     final controller = DetailsController.instance;
-    final pizzaSize = ["10\"", "14\"", "16\""];
+
     return SizedBox(
       height: 50,
       child: Row(
@@ -51,7 +51,7 @@ class Sizes extends StatelessWidget {
                       isCircular: true,
                       child: Center(
                         child: Text(
-                          pizzaSize[index],
+                          productSize[index],
                           style:
                               index == controller.size.value
                                   ? Theme.of(context).textTheme.bodyLarge!
@@ -64,7 +64,7 @@ class Sizes extends StatelessWidget {
                 ),
             separatorBuilder:
                 (context, index) => SizedBox(width: AppSizes.spaceBtwItems),
-            itemCount: pizzaSize.length,
+            itemCount: productSize.length,
           ),
 
           SizedBox(width: AppSizes.spaceBtwItems),

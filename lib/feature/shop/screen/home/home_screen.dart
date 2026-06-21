@@ -1,4 +1,3 @@
-
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/all_categories_section.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/home_upper_section.dart';
@@ -18,14 +17,14 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Timer(
     //   Duration(seconds: 2),
-    //   () => Get.dialog( 
+    //   () => Get.dialog(
     //     barrierDismissible: false, CustomOfferAlertDailog()),
     // );
     return Scaffold(
       appBar: CustomAppBar(
         leading: AppCircularIconButton(
           icon: SvgPicture.asset("assets/icon/svg/menu.svg"),
-          onPressed: () => Get.to(()=> ProfileScreen()),
+          onPressed: () => Get.to(() => ProfileScreen()),
         ),
         title: AppBarTitle(),
         actions: [AppCartButton()],
@@ -49,7 +48,8 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+
+      
     );
   }
 }
-

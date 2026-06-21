@@ -1,4 +1,3 @@
-
 import 'package:fast_food/common/paint/custom_container_paint.dart';
 import 'package:flutter/material.dart';
 
@@ -7,8 +6,9 @@ class ProductCard extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    this.child, 
-    this.description ,
+    this.child,
+    this.description,
+    this.isNetworkImage = false,
   });
 
   final String? image;
@@ -16,6 +16,7 @@ class ProductCard extends StatelessWidget {
   final String? description;
 
   final Widget? child;
+  final bool isNetworkImage;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class ProductCard extends StatelessWidget {
           ),
           Positioned(
             top: 0,
-            left: 10,
+            left: isNetworkImage ? 00 : 10,
             right: 10,
             child: Container(
               height: 114,
@@ -49,9 +50,15 @@ class ProductCard extends StatelessWidget {
                   ),
                 ],
               ),
-              child: image == null
-                  ? const SizedBox()
-                  : Image.asset(image!, fit: BoxFit.contain),
+              child:
+                  image == null
+                      ? const SizedBox()
+                      : isNetworkImage
+                      ? ClipRRect(
+                        borderRadius: BorderRadiusGeometry.circular(20),
+                        child: Image.network(image!, fit: BoxFit.cover),
+                      )
+                      : Image.asset(image!, fit: BoxFit.contain),
             ),
           ),
           Positioned(
@@ -67,11 +74,10 @@ class ProductCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
-                  description??"",
+                  description ?? "",
                   style: Theme.of(context).textTheme.bodySmall,
                   overflow: TextOverflow.ellipsis,
                 ),
-
               ],
             ),
           ),
@@ -79,7 +85,7 @@ class ProductCard extends StatelessWidget {
             bottom: 10,
             left: 10,
             right: 10,
-            child: child?? SizedBox(),
+            child: child ?? SizedBox(),
           ),
         ],
       ),

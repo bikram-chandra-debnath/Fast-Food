@@ -1,4 +1,3 @@
-
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
 import 'package:fast_food/common/shape/rounded_container.dart';
 import 'package:fast_food/utlis/constrant/app_colors.dart';
@@ -7,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ImageAndFavorite extends StatelessWidget {
-  const ImageAndFavorite({super.key});
-
+  const ImageAndFavorite({super.key, required this.productImage});
+  final String productImage;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -20,10 +19,7 @@ class ImageAndFavorite extends StatelessWidget {
           padding: EdgeInsetsGeometry.zero,
           child: ClipRRect(
             borderRadius: BorderRadiusGeometry.all(Radius.circular(20)),
-            child: Image.network(
-              "https://t4.ftcdn.net/jpg/02/74/99/01/240_F_274990113_ffVRBygLkLCZAATF9lWymzE6bItMVuH1.jpg",
-              fit: BoxFit.cover,
-            ),
+            child: Image.network(productImage, fit: BoxFit.cover),
           ),
         ),
 

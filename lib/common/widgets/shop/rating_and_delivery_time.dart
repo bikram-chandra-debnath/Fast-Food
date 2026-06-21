@@ -7,18 +7,18 @@ import 'package:flutter_svg/svg.dart';
 class RatingAndDeliveryTime extends StatelessWidget {
   const RatingAndDeliveryTime({
     super.key,
-    required this.reating,
+    required this.rating,
     this.deliveryCharge = "Free",
     required this.time,
   });
 
-  final String reating, deliveryCharge, time;
+  final String rating, deliveryCharge, time;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        AppRating(rating: reating),
+        AppRating(rating: rating),
         SizedBox(width: AppSizes.spaceBtwItems),
         Row(
           children: [

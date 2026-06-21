@@ -5,17 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ShowProductView extends StatelessWidget {
-  const ShowProductView({
-    super.key,
+  const ShowProductView({super.key, required this.productList});
+  final List productList;
 
-    required this.itemCount,
-    required this.productName,
-    required this.restaurantName,
-    required this.price,
-    required this.title,
-  });
-  final int itemCount;
-  final String productName, restaurantName, price, title;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +15,7 @@ class ShowProductView extends StatelessWidget {
       children: [
         // upper title of product
         Text(
-          title,
+          "Burgers",
           style: Theme.of(
             context,
           ).textTheme.displaySmall?.copyWith(fontSize: 20),
@@ -33,26 +25,36 @@ class ShowProductView extends StatelessWidget {
 
         // main view of produc
         GridView.builder(
-          itemCount: itemCount,
+          itemCount: productList.length,
           physics: NeverScrollableScrollPhysics(),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.72,
+            childAspectRatio: 0.85,
             crossAxisSpacing: AppSizes.spaceBtwItems,
           ),
           shrinkWrap: true,
           itemBuilder:
               (context, index) => ShowProductCard(
-                onPressed: () => Get.to(()=> ProductDetailsScreen()),
-                productName: productName,
-                restaurantName: restaurantName,
-                price: price,
+                onPressed:
+                    () => Get.to(
+                      () => ProductDetailsScreen(
+                        restaurantName: productList[index]["restaurant"],
+                        productName: productList[index]["name"],
+                        productDescription: productList[index]["description"],
+                        rating: productList[index]["rate"].toString(),
+                        time: productList[index]["time"].toString(),
+                        productPrice: productList[index]["price"],
+                        productImage: productList[index]["image"],
+                        productSize: productList[index]["Size"],
+                      ),
+                    ),
+                productName: productList[index]["name"],
+                restaurantName: productList[index]["restaurant"],
+                price: productList[index]["price"].toString(),
+                productImage: productList[index]["image"],
               ),
         ),
       ],
     );
   }
 }
-
-
-

@@ -3,8 +3,8 @@ import 'package:fast_food/utlis/constrant/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantName extends StatelessWidget {
-  const RestaurantName({super.key});
-
+  const RestaurantName({super.key, required this.restaurantName});
+  final String restaurantName;
   @override
   Widget build(BuildContext context) {
     return AppCustomRoundedContainer(
@@ -20,7 +20,7 @@ class RestaurantName extends StatelessWidget {
           //   "assets/icon/svg/restaurant.svg",
           //   fit: BoxFit.contain,
           // ),
-          Text("Uttora Coffe House"),
+          Text(restaurantName),
         ],
       ),
     );

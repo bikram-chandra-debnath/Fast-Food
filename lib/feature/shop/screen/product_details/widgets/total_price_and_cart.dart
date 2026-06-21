@@ -9,7 +9,8 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TotalPriceAndCart extends StatelessWidget {
-  const TotalPriceAndCart({super.key});
+  const TotalPriceAndCart({super.key, required this.productPrice});
+  final int productPrice;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class TotalPriceAndCart extends StatelessWidget {
             children: [
               Obx(
                 () => Text(
-                  "\$${(controller.quantity.value) * 7}",
+                  "\$${(controller.quantity.value) * productPrice}",
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
               ),

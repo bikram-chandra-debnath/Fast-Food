@@ -20,7 +20,7 @@ class AppDetailsImageBox extends StatelessWidget {
      
       child: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(AppSizes.md)),
-        child: Image.asset(
+        child: Image.network(
           image,
           fit: BoxFit.cover,
         ),

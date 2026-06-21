@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class RestaurantItems extends StatelessWidget {
-  const RestaurantItems({super.key});
+  const RestaurantItems({super.key, required this.menu});
+
+  final List menu;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class RestaurantItems extends StatelessWidget {
         itemBuilder:
             (BuildContext context, int index) => Obx(
               () => AppRoundedButton(
-                keyWord: "Burger ${index + 1}",
+                keyWord: menu[index]["category"],
                 onPressed: () => controller.changeIndex(index),
                 backgroundColor:
                     index == controller.current.value
@@ -32,7 +34,7 @@ class RestaurantItems extends StatelessWidget {
                         : null,
               ),
             ),
-        itemCount: 4,
+        itemCount: menu.length,
         separatorBuilder:
             (BuildContext context, int index) =>
                 SizedBox(width: AppSizes.spaceBtwItems),
