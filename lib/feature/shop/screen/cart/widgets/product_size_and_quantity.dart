@@ -9,7 +9,8 @@ class CartProductSizeAndQuantity extends StatelessWidget {
     required this.itemQuantity,
   });
 
-  final int itemQuantity, itemSize;
+  final int itemQuantity;
+  final String itemSize;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,7 +19,7 @@ class CartProductSizeAndQuantity extends StatelessWidget {
 
         children: [
           Text(
-            "$itemSize\"",
+            itemSize,
             style: Theme.of(
               context,
             ).textTheme.titleSmall!.copyWith(color: AppColors.textSecondery),

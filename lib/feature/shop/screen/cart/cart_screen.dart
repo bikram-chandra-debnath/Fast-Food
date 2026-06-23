@@ -70,15 +70,16 @@ class CartScreen extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder:
                     (BuildContext context, int index) => CartProductCard(
-                      itemName: 'Pizza Calzone Curopean',
+                      itemName: controller.cartItem[index]["name"],
                       itemQuantity: 1,
-                      itemSize: 14,
-                      price: 39,
+                      itemSize: controller.cartItem[index]["Size"][index],
+                      price: controller.cartItem[index]["price"],
+                      image: controller.cartItem[index]["image"],
                     ),
                 separatorBuilder:
                     (BuildContext context, int index) =>
                         SizedBox(height: AppSizes.spaceBtwItems),
-                itemCount: 5,
+                itemCount: controller.cartItem.length,
               ),
               SizedBox(height: 360),
             ],
