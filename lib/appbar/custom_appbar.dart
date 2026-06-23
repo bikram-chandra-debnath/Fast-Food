@@ -47,46 +47,48 @@ class AppCartButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        SizedBox(height: 50, width: 50),
-        Positioned(
-          top: 3,
-          left: 3,
-          right: 3,
-          bottom: 3,
-          child: AppCircularIconButton(
-            height: 40,
-            width: 40,
-            icon: SvgPicture.asset("assets/icon/svg/cart.svg"),
-            backgroundColor: AppColors.black,
-            color: AppColors.white,
-            onPressed: () => Get.to(() => CartScreen()),
-          ),
-        ),
-
-        Positioned(
-          top: 0,
-          right: 0,
-          child: Container(
-            height: 25,
-            width: 25,
-
-            decoration: BoxDecoration(
-              color: AppColors.primary,
-              shape: BoxShape.circle,
+    return GestureDetector(
+      onTap: () => Get.to(() => CartScreen()),
+      child: Stack(
+        children: [
+          SizedBox(height: 50, width: 50),
+          Positioned(
+            top: 3,
+            left: 3,
+            right: 3,
+            bottom: 3,
+            child: AppCircularIconButton(
+              height: 40,
+              width: 40,
+              icon: SvgPicture.asset("assets/icon/svg/cart.svg"),
+              backgroundColor: AppColors.black,
+              color: AppColors.white,
             ),
-            child: Center(
-              child: Text(
-                "2",
-                style: Theme.of(
-                  context,
-                ).textTheme.titleMedium!.apply(color: AppColors.white),
+          ),
+
+          Positioned(
+            top: 0,
+            right: 0,
+            child: Container(
+              height: 25,
+              width: 25,
+
+              decoration: BoxDecoration(
+                color: AppColors.primary,
+                shape: BoxShape.circle,
+              ),
+              child: Center(
+                child: Text(
+                  "2",
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleMedium!.apply(color: AppColors.white),
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
