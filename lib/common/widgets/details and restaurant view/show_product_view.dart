@@ -5,8 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ShowProductView extends StatelessWidget {
-  const ShowProductView({super.key, required this.productList});
+  const ShowProductView({
+    super.key,
+    required this.productList,
+    this.iscategory = true,
+  });
   final List productList;
+  final bool iscategory;
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +19,14 @@ class ShowProductView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // upper title of product
-        Text(
-          "Burgers",
-          style: Theme.of(
-            context,
-          ).textTheme.displaySmall?.copyWith(fontSize: 20),
-        ),
+        iscategory
+            ? Text(
+              "Burgers",
+              style: Theme.of(
+                context,
+              ).textTheme.displaySmall?.copyWith(fontSize: 20),
+            )
+            : SizedBox(),
 
         SizedBox(height: AppSizes.spaceBtwItems),
 

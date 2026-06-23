@@ -1,6 +1,7 @@
 import 'package:fast_food/appbar/custom_appbar.dart';
 import 'package:fast_food/common/buttons/circular_Icon_button.dart';
 import 'package:fast_food/common/widgets/shop/rating_and_delivery_time.dart';
+import 'package:fast_food/feature/shop/controller/details_controller.dart';
 import 'package:fast_food/feature/shop/screen/product_details/widgets/image_and_favorite.dart'
     show ImageAndFavorite;
 import 'package:fast_food/feature/shop/screen/product_details/widgets/ingradent.dart';
@@ -24,7 +25,8 @@ class ProductDetailsScreen extends StatelessWidget {
     required this.rating,
     required this.time,
     required this.productPrice,
-    required this.productImage, required this.productSize,
+    required this.productImage,
+    required this.productSize,
   });
 
   final String restaurantName,
@@ -38,11 +40,15 @@ class ProductDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = DetailsController.instance;
     return Scaffold(
       appBar: CustomAppBar(
         leading: AppCircularIconButton(
           icon: SvgPicture.asset(AppImage.arrowBack),
-          onPressed: () => Get.back(),
+          onPressed: () {
+            Get.back();
+            controller.quantity.value = 1;
+          },
         ),
         title: Text(
           AppText.details,

@@ -50,6 +50,7 @@ dependencies:
   flutter_native_splash:
   crystal_navigation_bar: 
   see_more_text: 
+  dropdown_button2: ^3.1.0
 
 
 dev_dependencies:

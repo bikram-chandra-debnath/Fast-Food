@@ -1,5 +1,6 @@
 import 'package:fast_food/common/widgets/shop/section_heading.dart';
 import 'package:fast_food/feature/shop/controller/category_controller.dart';
+import 'package:fast_food/feature/shop/screen/all_categroy/all_category_screen.dart';
 import 'package:fast_food/feature/shop/screen/home/widgets/categories_card.dart';
 import 'package:fast_food/utlis/constrant/app_size.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
@@ -21,7 +22,7 @@ class AllCategoriesSection extends StatelessWidget {
           ),
           child: AppSectionHeading(
             title: AppText.allCategories,
-            onPressed: () {},
+            onPressed: () => Get.to(() => AllCategoryScreen()),
           ),
         ),
         SizedBox(height: AppSizes.spaceBtwItems / 2),
@@ -36,10 +37,13 @@ class AllCategoriesSection extends StatelessWidget {
             scrollDirection: Axis.horizontal,
 
             itemBuilder:
-                (context, index) => AppCategoriesCard(
-                  title: controller.category[index]["title"],
-                  price: '\$${controller.category[index]["start"]}',
-                  image: controller.category[index]["image"],
+                (context, index) => GestureDetector(
+                  onTap: () => Get.to(() => AllCategoryScreen()),
+                  child: AppCategoriesCard(
+                    title: controller.category[index]["title"],
+                    price: '\$${controller.category[index]["start"]}',
+                    image: controller.category[index]["image"],
+                  ),
                 ),
             separatorBuilder:
                 (context, index) => SizedBox(width: AppSizes.spaceBtwItems),
@@ -50,5 +54,3 @@ class AllCategoriesSection extends StatelessWidget {
     );
   }
 }
-
-

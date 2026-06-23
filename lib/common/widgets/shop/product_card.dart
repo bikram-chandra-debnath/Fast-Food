@@ -34,8 +34,8 @@ class ProductCard extends StatelessWidget {
           ),
           Positioned(
             top: 0,
-            left: isNetworkImage ? 00 : 10,
-            right: 10,
+            left: isNetworkImage ? 10 : 10,
+            right: isNetworkImage ? 20 : 10,
             child: Container(
               height: 114,
               width: 122,
