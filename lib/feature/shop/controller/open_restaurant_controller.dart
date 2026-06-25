@@ -16,7 +16,7 @@ class OpenRestaurantController extends GetxController {
       "menu": [
         {
           "category": "Burger",
-          "bugers": [
+          "Burger": [
             {
               "restaurant": "Rose Garden Restaurant",
               "image":
@@ -69,7 +69,7 @@ class OpenRestaurantController extends GetxController {
         },
         {
           "category": "Pizza",
-          "pizzas": [
+          "Pizza": [
             {
               "restaurant": "Italiano Express",
               "image":
@@ -127,7 +127,7 @@ class OpenRestaurantController extends GetxController {
         },
         {
           "category": "Drinks",
-          "drinks": [
+          "Drinks": [
             {
               "restaurant": "Cool Café",
               "image":
@@ -156,7 +156,7 @@ class OpenRestaurantController extends GetxController {
     },
     // {
     //   "image":
-    //       "https://images.unsplash.com/photo-1555992336-03a23c3bf1c4?q=80&w=1170&auto=format&fit=crop",
+    //       "https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D",
     //   "title": "Italiano Express",
     //   "subtitle": "Pizza - Pasta - Salad",
     //   "description":
@@ -166,7 +166,7 @@ class OpenRestaurantController extends GetxController {
     //   "menu": [
     //     {
     //       "category": "Pizza",
-    //       "pizzas": [
+    //       "Pizza": [
     //         {
     //           "restaurant": "Italiano Express",
     //           "image":
