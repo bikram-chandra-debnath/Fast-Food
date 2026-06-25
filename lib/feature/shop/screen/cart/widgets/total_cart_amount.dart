@@ -1,4 +1,4 @@
-import 'package:fast_food/feature/authenticaton/controller/cart/cart_controller.dart';
+import 'package:fast_food/feature/shop/controller/cart_controller.dart';
 import 'package:fast_food/utlis/constrant/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
